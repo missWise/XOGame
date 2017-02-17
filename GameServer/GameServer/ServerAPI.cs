@@ -12,6 +12,7 @@ namespace GameServer
 {
     class ServerAPI
     {
+        //Some coment
         TcpListener serverListener;
         ConnectionList connectionList;
         CommandManager commandManager;

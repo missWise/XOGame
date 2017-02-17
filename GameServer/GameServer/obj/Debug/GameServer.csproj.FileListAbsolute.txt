@@ -28,3 +28,6 @@ E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyRefere
 C:\Users\nikit\Desktop\Чат\GameServer\GameServer\bin\Debug\GameServer.exe.config
 C:\Users\nikit\Desktop\Чат\GameServer\GameServer\obj\Debug\GameServer.exe
 C:\Users\nikit\Desktop\Чат\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\XOGame\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\XOGame\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\XOGame\GameServer\GameServer\obj\Debug\GameServer.pdb
