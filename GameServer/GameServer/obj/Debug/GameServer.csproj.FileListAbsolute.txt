@@ -1,0 +1,30 @@
+c:\users\vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\bin\Debug\GameServer.exe.config
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\bin\Debug\GameServer.exe
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\bin\Debug\GameServer.pdb
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\obj\Debug\GameServer.exe
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\bin\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\bin\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork35\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+D:\Programming\ORT\HomeWork36\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\Programming\ORT\HomeWork36\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork36\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\bin\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\bin\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork41\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+E:\gamexo\GameServer\GameServer\bin\Debug\GameServer.exe.config
+E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.exe
+E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.pdb
+E:\gamexo\GameServer\GameServer\bin\Debug\GameServer.exe
+E:\gamexo\GameServer\GameServer\bin\Debug\GameServer.pdb
+E:\gamexo\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\Users\nikit\Desktop\Чат\GameServer\GameServer\bin\Debug\GameServer.exe.config
+C:\Users\nikit\Desktop\Чат\GameServer\GameServer\obj\Debug\GameServer.exe
+C:\Users\nikit\Desktop\Чат\GameServer\GameServer\obj\Debug\GameServer.pdb

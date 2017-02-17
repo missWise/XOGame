@@ -1,0 +1,54 @@
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\bin\Debug\GameClient.exe.config
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\bin\Debug\GameClient.exe
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\bin\Debug\GameClient.pdb
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.csprojResolveAssemblyReference.cache
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.AskRequest.resources
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.MainForm.resources
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.exe
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.pdb
+c:\users\vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.GameXO.resources
+C:\Users\Vladislav\documents\visual studio 2015\Projects\GameClient\GameClient\obj\Debug\GameClient.LoginForm.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\bin\Debug\GameClient.exe.config
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.exe
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.pdb
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\bin\Debug\GameClient.exe
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\bin\Debug\GameClient.pdb
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.csprojResolveAssemblyReference.cache
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.AskRequest.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.GameXO.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.LoginForm.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.MainForm.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
+D:\Programming\ORT\HomeWork36\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\bin\Debug\GameClient.exe.config
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.exe
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.pdb
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\bin\Debug\GameClient.exe
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\bin\Debug\GameClient.pdb
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.csprojResolveAssemblyReference.cache
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.AskRequest.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.GameXO.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.LoginForm.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.MainForm.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
+D:\Programming\ORT\HomeWork41\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+E:\gamexo\GameClient\GameClient\bin\Debug\GameClient.exe.config
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.exe
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.pdb
+E:\gamexo\GameClient\GameClient\bin\Debug\GameClient.exe
+E:\gamexo\GameClient\GameClient\bin\Debug\GameClient.pdb
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.csprojResolveAssemblyReference.cache
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.AskRequest.resources
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.GameXO.resources
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.MainForm.resources
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
+E:\gamexo\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+C:\Users\nikit\Desktop\Чат\GameClient\GameClient\bin\Debug\GameClient.exe.config
+C:\Users\nikit\Desktop\Чат\GameClient\GameClient\obj\Debug\GameClient.exe
+C:\Users\nikit\Desktop\Чат\GameClient\GameClient\obj\Debug\GameClient.pdb
