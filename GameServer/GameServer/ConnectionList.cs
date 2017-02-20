@@ -46,7 +46,7 @@ namespace GameServer
             BroadcastSend();
         }
 
-        private void BroadcastSend()
+        public void BroadcastSend()
         {
             foreach (var item in clientList)
             {              
@@ -64,7 +64,7 @@ namespace GameServer
             {
                 if (item.name == name)
                     continue;
-                users += item.name + ",";
+                users += item.name+"#"+item.status + ",";
             }
             users = users.TrimEnd(',');
 

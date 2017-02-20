@@ -12,11 +12,13 @@ namespace GameServer
     {
         public string name;
         public TcpClient user;
+        public string status;
 
-        public Client(string name, TcpClient user)
+        public Client(string name, TcpClient user,string status)
         {
             this.name = name;
-            this.user = user;            
+            this.user = user;
+            this.status = status;           
         }
         public string Read()
         {

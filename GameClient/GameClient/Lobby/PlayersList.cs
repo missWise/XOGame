@@ -22,21 +22,34 @@ namespace GameClient
         {
             InitializeComponent();
             cbGame.SelectedIndex = 0;
+            CheckForIllegalCrossThreadCalls = false;
         }
         
-
         public void AddList(string[] items)
         {
-            lbPlayers.Invoke(new Action(() => { lbPlayers.Items.Clear(); }));
+           
+            lbPlayers.Items.Clear();
             for (int i = 1; i < items.Length; i++)
             {
-                lbPlayers.Invoke(new Action(() => { lbPlayers.Items.Add(items[i]); }));
+                string[] statuscont = items[i].Split('#');
+                if(statuscont[1]!="1")
+                lbPlayers.Items.Add(statuscont[0]); 
             }
+        }
+        public bool CheckGameStatus(string name)
+        {
+            if (lbPlayers.Items.Count != 0)
+            {
+                if (lbPlayers.Items.Contains(name))
+                    return true;
+                else return false;
+            }
+            else return false;
         }
 
         private void btnInvite_Click(object sender, EventArgs e)
         {
-            if (lbPlayers.SelectedItem != null)
+            if (lbPlayers.SelectedItem != null )
             {
                 SendInvite(name, lbPlayers.SelectedItem.ToString(), cbGame.SelectedItem.ToString());
             }
@@ -48,14 +61,47 @@ namespace GameClient
 
         public void SendInvite(string player1, string player2, string gameid)
         {
-            StreamWriter sw = new StreamWriter(stream);
-            sw.WriteLine("lobby,invite" + "," + player1 + "," + player2 + "," + gameid);
-            sw.Flush();
+            try
+            {
+                StreamWriter sw = new StreamWriter(stream);
+                sw.WriteLine("lobby,invite" + "," + player1 + "," + player2 + "," + gameid);
+                sw.Flush();
+                Thread.Sleep(100);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available!");
+            }
         }
 
-        private void PlayersList_FormClosed(object sender, FormClosedEventArgs e)
+        private void RefreshPlayers_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            try
+            {
+                StreamWriter sw = new StreamWriter(stream);
+                sw.WriteLine("list" + "," + "");
+                sw.Flush();
+                Thread.Sleep(100);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available!");
+            }
+        }
+
+        private void PlayersList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                StreamWriter sw = new StreamWriter(stream);
+                sw.WriteLine("lobby,exit" + "," + lb_name.Text);
+                sw.Flush();
+            }
+            catch { }
+            finally
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

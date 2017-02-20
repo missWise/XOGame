@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.lbPlayers = new System.Windows.Forms.ListBox();
-            this.cbGame = new System.Windows.Forms.ComboBox();
             this.btnInvite = new System.Windows.Forms.Button();
             this.lb_players = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
+            this.RefreshPlayers = new System.Windows.Forms.Button();
+            this.cbGame = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbPlayers
@@ -42,16 +43,6 @@
             this.lbPlayers.Name = "lbPlayers";
             this.lbPlayers.Size = new System.Drawing.Size(178, 264);
             this.lbPlayers.TabIndex = 0;
-            // 
-            // cbGame
-            // 
-            this.cbGame.FormattingEnabled = true;
-            this.cbGame.Items.AddRange(new object[] {
-            "XO"});
-            this.cbGame.Location = new System.Drawing.Point(219, 12);
-            this.cbGame.Name = "cbGame";
-            this.cbGame.Size = new System.Drawing.Size(121, 21);
-            this.cbGame.TabIndex = 1;
             // 
             // btnInvite
             // 
@@ -81,19 +72,42 @@
             this.lb_name.TabIndex = 4;
             this.lb_name.Text = "label1";
             // 
+            // RefreshPlayers
+            // 
+            this.RefreshPlayers.Location = new System.Drawing.Point(219, 93);
+            this.RefreshPlayers.Name = "RefreshPlayers";
+            this.RefreshPlayers.Size = new System.Drawing.Size(113, 23);
+            this.RefreshPlayers.TabIndex = 5;
+            this.RefreshPlayers.Text = "Refresh Players";
+            this.RefreshPlayers.UseVisualStyleBackColor = true;
+            this.RefreshPlayers.Click += new System.EventHandler(this.RefreshPlayers_Click);
+            // 
+            // cbGame
+            // 
+            this.cbGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGame.FormattingEnabled = true;
+            this.cbGame.Items.AddRange(new object[] {
+            "XO"});
+            this.cbGame.Location = new System.Drawing.Point(219, 12);
+            this.cbGame.Name = "cbGame";
+            this.cbGame.Size = new System.Drawing.Size(121, 21);
+            this.cbGame.TabIndex = 1;
+            // 
             // PlayersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 319);
+            this.Controls.Add(this.RefreshPlayers);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.lb_players);
             this.Controls.Add(this.btnInvite);
             this.Controls.Add(this.cbGame);
             this.Controls.Add(this.lbPlayers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "PlayersList";
             this.Text = "PlayersList";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlayersList_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayersList_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,9 +116,10 @@
         #endregion
 
         private System.Windows.Forms.ListBox lbPlayers;
-        private System.Windows.Forms.ComboBox cbGame;
         private System.Windows.Forms.Button btnInvite;
         private System.Windows.Forms.Label lb_players;
         public System.Windows.Forms.Label lb_name;
+        private System.Windows.Forms.Button RefreshPlayers;
+        private System.Windows.Forms.ComboBox cbGame;
     }
 }

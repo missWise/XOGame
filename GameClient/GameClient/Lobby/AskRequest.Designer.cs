@@ -54,7 +54,7 @@
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(248, 47);
+            this.btnNo.Location = new System.Drawing.Point(300, 47);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(75, 23);
             this.btnNo.TabIndex = 2;
@@ -66,10 +66,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 82);
+            this.ClientSize = new System.Drawing.Size(482, 82);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.lRequest);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AskRequest";
             this.Text = "AskRequest";
             this.ResumeLayout(false);

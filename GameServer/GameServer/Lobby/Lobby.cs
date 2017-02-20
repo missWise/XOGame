@@ -21,7 +21,11 @@ namespace GameServer
             switch(msg[1])
             {
                 case "invite":
+                    if(commandManager.connectionList.GetClient(msg[2]).status != "1")
                     inviteManager.SendInvite(commandManager.connectionList.GetClient(msg[2]), commandManager.connectionList.GetClient(msg[3]), msg[4]);
+                    break;
+                case "exit":
+                    commandManager.connectionList.Remove(commandManager.connectionList.GetClient(msg[2]));
                     break;
             }
         }

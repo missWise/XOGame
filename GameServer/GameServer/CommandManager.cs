@@ -30,6 +30,9 @@ namespace GameServer
                 case "games":
                     games.SetCommand(message);
                     break;
+                case "list":
+                    connectionList.BroadcastSend();
+                    break;
             }         
         }      
     }

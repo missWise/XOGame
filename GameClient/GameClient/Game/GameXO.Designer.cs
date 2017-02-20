@@ -145,8 +145,10 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn0);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "GameXO";
             this.Text = "GameXO";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameXO_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

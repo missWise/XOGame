@@ -27,7 +27,16 @@ namespace GameServer
                         switch (msg[5])
                         {
                             case "XO":
-                                gameList.Add(new XO(commandManager.connectionList.GetClient(msg[3]), commandManager.connectionList.GetClient(msg[4])));
+                                Random ran = new Random();
+                                int variant = ran.Next(0, 2);
+                                if (variant == 1)
+                                {
+                                    gameList.Add(new XO(commandManager.connectionList.GetClient(msg[3]), commandManager.connectionList.GetClient(msg[4])));
+                                }
+                                else gameList.Add(new XO(commandManager.connectionList.GetClient(msg[4]), commandManager.connectionList.GetClient(msg[3])));
+                                commandManager.connectionList.GetClient(msg[3]).status = "1";
+                                commandManager.connectionList.GetClient(msg[4]).status = "1";
+                                commandManager.Dispatcher("list");
                                 break;
                         }
                     }
@@ -51,14 +60,20 @@ namespace GameServer
             {
                 return false;
             }
-
-            StreamWriter writer = new StreamWriter(player1.user.GetStream());
-            writer.WriteLine("ask" + "," + "XO");
-            writer.Flush();
-            StreamWriter sw = new StreamWriter(player2.user.GetStream());
-            sw.WriteLine("ask" + "," + "XO");
-            sw.Flush();
-            return true;
+            if (player1.status != "1" && player2.status != "1")
+            {
+                StreamWriter writer = new StreamWriter(player1.user.GetStream());
+                writer.WriteLine("ask" + "," + "XO");
+                writer.Flush();
+                StreamWriter sw = new StreamWriter(player2.user.GetStream());
+                sw.WriteLine("ask" + "," + "XO");
+                sw.Flush();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }    
     }
 }

@@ -23,13 +23,14 @@ namespace GameClient
             this.stream = stream;
             this.Text = name;
             this.name = name;
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         public void ShowForm()
         {
             this.ShowDialog();
         }
-        
+
         private void button7_Click(object sender, EventArgs e)
         {
             SendInfo("6");
@@ -77,9 +78,16 @@ namespace GameClient
 
         public void SendInfo(string btnname)
         {
-            StreamWriter sw = new StreamWriter(stream);
-            sw.WriteLine("games,gamexo," + name + "," + btnname);
-            sw.Flush();
+            try
+            {
+                StreamWriter sw = new StreamWriter(stream);
+                sw.WriteLine("games,gamexo," + name + "," + btnname);
+                sw.Flush();
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available!");
+            }
         }
 
         public void ReceiveGameData(string output)
@@ -88,22 +96,34 @@ namespace GameClient
 
             if (msg[1] == "victory")
             {
-                MessageBox.Show("Congratulations! You won!");
+                MessageBox.Show(name+" won!");
+               
+                
+                this.Close();
                 return;
             }
             else if (msg[1] == "fail")
             {
-                MessageBox.Show("Sorry, you lost this game.");
+                MessageBox.Show(name+" lost this game.");
+                this.Close();
                 return;
             }
             else if (msg[1] == "standoff")
             {
                 MessageBox.Show("It's draw!");
+                
+                this.Close();
                 return;
             }
-            if(msg[1] == "yourturn")
+            else if (msg[1] == "stopgame")
             {
-                lb_turn.Invoke(new Action(() => { lb_turn.Text = "Choose the cell"; }));
+                MessageBox.Show("The game was interrupted!");
+                this.Dispose();
+                return;
+            }
+            if (msg[1] == "yourturn")
+            {
+                lb_turn.Text = "Choose the cell";
                 return;
             }
             if (msg[1] == "notyourturn")
@@ -117,8 +137,20 @@ namespace GameClient
             var btn = controls[0] as Button;
             if (msg[1] != null)
             {
-                btn.Invoke(new Action(() => { btn.Text = msg[2]; }));
+                btn.Text = msg[2];
+                btn.Enabled = false;
             }
+        }
+
+        private void GameXO_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                StreamWriter sw = new StreamWriter(stream);
+                sw.WriteLine("games,gamexo," + name + "," + "stopgame");
+                sw.Flush();
+            }
+            catch { }
         }
     }
 }
