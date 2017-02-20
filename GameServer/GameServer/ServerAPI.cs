@@ -31,6 +31,7 @@ namespace GameServer
         private void ConnectionLoop()
         {
             serverListener.Start();
+            LogManager.AddToLog("server", "started");
             Thread ThreadListen = new Thread(new ThreadStart(Receive));
             ThreadListen.Start();
             while (true)
@@ -45,6 +46,7 @@ namespace GameServer
                     Client cl = connectionList.clientList.Find(c => c.name == input[1]);
                     if (cl == null)
                         connectionList.AddList(new Client(input[1], connectedClient, input[3]));
+                    LogManager.AddToLog(input[1], inp);
                 }
             }
         }
@@ -60,6 +62,7 @@ namespace GameServer
                     if (connectionList.clientList[i].user.GetStream().DataAvailable)
                     {
                         string message = connectionList.clientList[i].Read();
+                        LogManager.AddToLog(connectionList.clientList[i].name, message);
                         commandManager.Dispatcher(message);
                     }
                 }

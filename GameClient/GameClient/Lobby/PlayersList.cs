@@ -27,7 +27,6 @@ namespace GameClient
         
         public void AddList(string[] items)
         {
-           
             lbPlayers.Items.Clear();
             for (int i = 1; i < items.Length; i++)
             {

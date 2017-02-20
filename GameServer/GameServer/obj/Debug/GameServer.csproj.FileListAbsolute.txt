@@ -53,3 +53,17 @@ C:\Users\Sherlock\Desktop\GameXoProd\GameServer\GameServer\bin\Debug\EntityFrame
 C:\Users\Sherlock\Desktop\GameXoProd\GameServer\GameServer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sherlock\Desktop\GameXoProd\GameServer\GameServer\bin\Debug\System.Data.SQLite.xml
 C:\Users\Sherlock\Desktop\GameXoProd\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\GameServer.exe
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\GameServer.pdb
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\EntityFramework.dll
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\System.Data.SQLite.dll
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\EntityFramework.xml
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\bin\Debug\System.Data.SQLite.xml
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache

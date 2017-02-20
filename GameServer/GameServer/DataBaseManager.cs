@@ -56,20 +56,7 @@ namespace GameServer
             }
             return result;
         }
-        public void SelectAll()
-        {
-            Conn();
-            SQLiteCommand command = new SQLiteCommand("SELECT * FROM '" + tablename + "';", connection);
-            SQLiteDataReader reader = command.ExecuteReader();
-            foreach (DbDataRecord record in reader)
-            {
-                string id = record["login"].ToString();
-                string value = record["password"].ToString();
-                string result = "" + id + value;
-                Console.WriteLine(result);
-            }
-            connection.Close();
-        }
+        
         public bool CheckingIfExist(string login)
         {
             bool result = false;
@@ -106,6 +93,19 @@ namespace GameServer
             command.ExecuteNonQuery();
             connection.Close();
         }
-
+        public void SelectAll()
+        {
+            Conn();
+            SQLiteCommand command = new SQLiteCommand("SELECT * FROM '" + tablename + "';", connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            foreach (DbDataRecord record in reader)
+            {
+                string id = record["login"].ToString();
+                string value = record["password"].ToString();
+                string result = "" + id + value;
+                Console.WriteLine(result);
+            }
+            connection.Close();
+        }
     }
 }

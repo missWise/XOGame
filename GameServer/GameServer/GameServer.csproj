@@ -74,6 +74,7 @@
     <Compile Include="Games\IGame.cs" />
     <Compile Include="Lobby\InviteManager.cs" />
     <Compile Include="Lobby\Lobby.cs" />
+    <Compile Include="LogManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerAPI.cs" />

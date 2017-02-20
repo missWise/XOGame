@@ -17,7 +17,6 @@ namespace GameClient
         public NetworkStream netStream;
         PlayersList playersList;
         IGame game;
-      
 
         public ClientManager(){}
 

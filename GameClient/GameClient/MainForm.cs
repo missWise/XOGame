@@ -43,7 +43,7 @@ namespace GameClient
             try
             {
                 cm.Connect("auth", tbLogin.Text, tbPassword.Text, pl);
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 if (!(pl.lb_name.Text == "label1"))
                 {
                     pl.Show();
@@ -79,7 +79,7 @@ namespace GameClient
             {
                 cm.Connect("reg", tbLogin.Text, tbPassword.Text, pl);
 
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 if (!(pl.lb_name.Text == "label1"))
                 {
                     pl.Show();
