@@ -51,7 +51,7 @@ namespace GameClient
                 }
                 else MessageBox.Show("Invalid login or pass");
             }
-            catch (Exception ex)
+            catch 
             {
                 MessageBox.Show("Server is not available");
             }

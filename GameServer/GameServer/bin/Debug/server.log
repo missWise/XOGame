@@ -34,3 +34,322 @@
 21.02.2017 0:03:58 - oleq: games,gamexo,oleq,stopgame
 21.02.2017 0:04:02 - lena: lobby,exit,lena
 21.02.2017 0:04:04 - oleq: lobby,exit,oleq
+21.02.2017 12:21:37 - server: started
+21.02.2017 13:22:30 - server: started
+21.02.2017 13:23:11 - server: started
+21.02.2017 13:24:11 - oleq: auth,oleq,1971,0
+21.02.2017 13:27:11 - server: started
+21.02.2017 13:28:03 - server: started
+21.02.2017 13:28:54 - server: started
+21.02.2017 13:29:16 - oleq: auth,oleq,1971,0
+21.02.2017 13:32:00 - server: started
+21.02.2017 13:32:31 - server: started
+21.02.2017 13:32:35 - oleq: auth,oleq,1971,0
+21.02.2017 13:32:57 - server: started
+21.02.2017 13:33:20 - server: started
+21.02.2017 13:33:24 - oleq: auth,oleq,1971,0
+21.02.2017 13:35:09 - server: started
+21.02.2017 13:35:46 - server: started
+21.02.2017 13:35:50 - oleq: auth,oleq,1971,0
+21.02.2017 13:36:13 - server: started
+21.02.2017 13:36:43 - server: started
+21.02.2017 13:36:51 - oleq: auth,oleq,1971,0
+21.02.2017 13:37:50 - server: started
+21.02.2017 13:38:41 - server: started
+21.02.2017 13:39:45 - oleq: auth,oleq,1971,0
+21.02.2017 13:40:39 - server: started
+21.02.2017 13:42:17 - server: started
+21.02.2017 13:42:41 - oleq: auth,oleq,1971,0
+21.02.2017 13:42:49 - oleq: auth,oleq,1971,0
+21.02.2017 13:43:15 - server: started
+21.02.2017 13:46:36 - server: started
+21.02.2017 13:51:31 - server: started
+21.02.2017 13:52:28 - server: started
+21.02.2017 13:53:57 - server: started
+21.02.2017 13:54:24 - oleq: auth,oleq,1971,0
+21.02.2017 13:54:34 - oleq: auth,oleq,1971,0
+21.02.2017 13:56:54 - git: reg,git,123,0
+21.02.2017 13:59:17 - oleq: auth,oleq,1971,0
+21.02.2017 13:59:46 - lena: auth,lena,123,0
+21.02.2017 13:59:50 - lena: lobby,invite,lena,oleq,XO
+21.02.2017 13:59:53 - lena: lobby,invite,lena,git,XO
+21.02.2017 13:59:55 - lena: lobby,invite,lena,git,XO
+21.02.2017 13:59:55 - lena: lobby,invite,lena,git,XO
+21.02.2017 13:59:55 - lena: lobby,invite,lena,git,XO
+21.02.2017 13:59:55 - lena: lobby,invite,lena,git,XO
+21.02.2017 14:00:34 - lena: lobby,invite,lena,git,XO
+21.02.2017 14:01:43 - server: started
+21.02.2017 14:02:24 - oleq: auth,oleq,1971,0
+21.02.2017 14:02:37 - lena: auth,lena,123,0
+21.02.2017 14:02:40 - lena: lobby,invite,lena,oleq,XO
+21.02.2017 14:02:41 - oleq: games,ask,Yes,oleq,lena,XO
+21.02.2017 14:02:45 - oleq: games,gamexo,oleq,0
+21.02.2017 14:02:46 - lena: games,gamexo,lena,4
+21.02.2017 14:02:48 - oleq: games,gamexo,oleq,1
+21.02.2017 14:02:48 - lena: games,gamexo,lena,5
+21.02.2017 14:02:49 - oleq: games,gamexo,oleq,2
+21.02.2017 14:02:50 - oleq: games,gamexo,oleq,stopgame
+21.02.2017 14:02:52 - lena: games,gamexo,lena,stopgame
+21.02.2017 14:02:53 - lena: list,
+21.02.2017 14:02:54 - lena: lobby,invite,lena,oleq,XO
+21.02.2017 14:02:56 - oleq: games,ask,Yes,oleq,lena,XO
+21.02.2017 14:02:59 - lena: games,gamexo,lena,0
+21.02.2017 14:03:01 - oleq: games,gamexo,oleq,5
+21.02.2017 14:03:02 - lena: games,gamexo,lena,1
+21.02.2017 14:03:02 - oleq: games,gamexo,oleq,4
+21.02.2017 14:03:03 - lena: games,gamexo,lena,2
+21.02.2017 14:03:04 - oleq: games,gamexo,oleq,stopgame
+21.02.2017 14:03:05 - lena: games,gamexo,lena,stopgame
+21.02.2017 14:03:07 - lena: lobby,exit,lena
+21.02.2017 14:03:09 - oleq: lobby,exit,oleq
+21.02.2017 14:10:08 - server: started
+21.02.2017 14:11:42 - oleq: auth,oleq,1971,0
+21.02.2017 14:11:54 - lena: auth,lena,123,0
+21.02.2017 14:12:05 - lena: lobby,invite,lena,oleq,XO
+21.02.2017 14:12:06 - oleq: games,ask,Yes,oleq,lena,XO
+21.02.2017 14:12:10 - oleq: games,gamexo,oleq,0
+21.02.2017 14:12:11 - lena: games,gamexo,lena,4
+21.02.2017 14:12:11 - oleq: games,gamexo,oleq,1
+21.02.2017 14:12:12 - lena: games,gamexo,lena,5
+21.02.2017 14:12:13 - oleq: games,gamexo,oleq,2
+21.02.2017 14:12:14 - lena: games,gamexo,lena,stopgame
+21.02.2017 14:12:15 - oleq: games,gamexo,oleq,stopgame
+21.02.2017 14:12:16 - lena: list,
+21.02.2017 14:12:17 - lena: lobby,invite,lena,oleq,XO
+21.02.2017 14:12:19 - oleq: games,ask,Yes,oleq,lena,XO
+21.02.2017 14:12:22 - oleq: games,gamexo,oleq,0
+21.02.2017 14:12:23 - lena: games,gamexo,lena,0
+21.02.2017 14:12:24 - oleq: games,gamexo,oleq,4
+21.02.2017 14:12:24 - lena: games,gamexo,lena,1
+21.02.2017 14:12:25 - oleq: games,gamexo,oleq,3
+21.02.2017 14:12:26 - lena: games,gamexo,lena,2
+21.02.2017 14:12:27 - lena: games,gamexo,lena,stopgame
+21.02.2017 14:12:28 - oleq: games,gamexo,oleq,stopgame
+21.02.2017 14:12:29 - lena: lobby,exit,lena
+21.02.2017 14:12:31 - oleq: lobby,exit,oleq
+21.02.2017 14:40:50 - server: started
+21.02.2017 14:45:47 - server: started
+21.02.2017 14:48:11 - server: started
+21.02.2017 19:26:21 - server: started
+21.02.2017 19:27:18 - server: started
+21.02.2017 19:29:45 - server: started
+21.02.2017 19:36:11 - server: started
+21.02.2017 19:36:21 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:36:21 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:36:40 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:36:43 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:37:07 - server: started
+21.02.2017 19:37:19 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:37:35 - lena: auth,lena,123,0
+
+21.02.2017 19:37:37 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:37:39 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:37:44 - lena: games,gamexo,lena,0
+
+21.02.2017 19:37:45 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:37:45 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:37:46 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:37:46 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:37:46 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:37:48 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:37:49 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:37:50 - lena: lobby,exit,lena
+
+21.02.2017 19:39:27 - server: started
+21.02.2017 19:39:37 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:40:19 - lena: auth,lena,123,0
+
+21.02.2017 19:40:41 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:40:43 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:40:53 - lena: games,gamexo,lena,0
+
+21.02.2017 19:40:53 - lena: games,gamexo,lena,1
+
+21.02.2017 19:40:53 - lena: games,gamexo,lena,2
+
+21.02.2017 19:40:54 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:40:55 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:40:55 - oleq: games,gamexo,oleq,5
+
+21.02.2017 19:40:55 - oleq: games,gamexo,oleq,4
+
+21.02.2017 19:40:56 - oleq: games,gamexo,oleq,3
+
+21.02.2017 19:40:56 - oleq: games,gamexo,oleq,6
+
+21.02.2017 19:40:57 - oleq: games,gamexo,oleq,7
+
+21.02.2017 19:40:57 - oleq: games,gamexo,oleq,4
+
+21.02.2017 19:40:57 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:40:58 - oleq: games,gamexo,oleq,5
+
+21.02.2017 19:40:58 - oleq: games,gamexo,oleq,8
+
+21.02.2017 19:40:58 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:40:59 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:40:59 - oleq: games,gamexo,oleq,4
+
+21.02.2017 19:40:59 - oleq: games,gamexo,oleq,7
+
+21.02.2017 19:40:59 - oleq: games,gamexo,oleq,6
+
+21.02.2017 19:41:00 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:41:00 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:41:01 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:41:02 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:41:20 - hit: reg,hit,123,0
+
+21.02.2017 19:41:23 - hit: list,
+
+21.02.2017 19:41:23 - hit: list,
+
+21.02.2017 19:41:27 - hit: lobby,invite,hit,oleq,XO
+
+21.02.2017 19:41:34 - oleq: lobby,invite,oleq,lena,XO
+
+21.02.2017 19:41:35 - lena: games,ask,Yes,lena,oleq,XO
+
+21.02.2017 19:41:39 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:41:39 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:41:41 - hit: list,
+
+21.02.2017 19:41:41 - hit: list,
+
+21.02.2017 19:41:49 - hit: lobby,exit,hit
+
+21.02.2017 19:41:50 - oleq: lobby,exit,oleq
+
+21.02.2017 19:44:10 - server: started
+21.02.2017 19:44:25 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:44:38 - lena: auth,lena,123,0
+
+21.02.2017 19:44:41 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:44:43 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:44:46 - lena: games,gamexo,lena,0
+
+21.02.2017 19:44:46 - lena: games,gamexo,lena,0
+
+21.02.2017 19:44:47 - lena: games,gamexo,lena,1
+
+21.02.2017 19:44:47 - lena: games,gamexo,lena,1
+
+21.02.2017 19:44:48 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:44:48 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:44:48 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:44:48 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:44:49 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:44:49 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:44:49 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:44:52 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:44:53 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:45:12 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:45:14 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:46:09 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:46:11 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:46:14 - oleq: lobby,invite,oleq,lena,XO
+
+21.02.2017 19:46:16 - lena: games,ask,Yes,lena,oleq,XO
+
+21.02.2017 19:46:38 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:46:40 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:46:43 - oleq: lobby,invite,oleq,lena,XO
+
+21.02.2017 19:46:45 - lena: games,ask,Yes,lena,oleq,XO
+
+21.02.2017 19:48:38 - server: started
+21.02.2017 19:48:48 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:49:02 - lena: auth,lena,123,0
+
+21.02.2017 19:49:04 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:49:05 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:49:16 - lena: games,gamexo,lena,0
+
+21.02.2017 19:49:17 - oleq: games,gamexo,oleq,4
+
+21.02.2017 19:49:17 - lena: games,gamexo,lena,8
+
+21.02.2017 19:49:19 - oleq: games,gamexo,oleq,6
+
+21.02.2017 19:49:21 - lena: games,gamexo,lena,1
+
+21.02.2017 19:49:22 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:49:26 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:49:26 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:52:28 - server: started
+21.02.2017 19:52:39 - oleq: auth,oleq,1971,0
+
+21.02.2017 19:53:03 - lena: auth,lena,123,0
+
+21.02.2017 19:53:06 - lena: lobby,invite,lena,oleq,XO
+
+21.02.2017 19:53:08 - oleq: games,ask,Yes,oleq,lena,XO
+
+21.02.2017 19:53:15 - oleq: games,gamexo,oleq,0
+
+21.02.2017 19:53:15 - lena: games,gamexo,lena,4
+
+21.02.2017 19:53:16 - oleq: games,gamexo,oleq,1
+
+21.02.2017 19:53:17 - lena: games,gamexo,lena,5
+
+21.02.2017 19:53:18 - oleq: games,gamexo,oleq,2
+
+21.02.2017 19:53:20 - oleq: games,gamexo,oleq,stopgame
+
+21.02.2017 19:53:21 - lena: games,gamexo,lena,stopgame
+
+21.02.2017 19:53:22 - lena: lobby,exit,lena
+

@@ -18,6 +18,7 @@ namespace GameServer
         }
         public void SetCommand(string command)
         {
+            command = command.Replace("\r\n","");
             string[] msg = command.Split(',');
             switch (msg[1])
             {
@@ -62,12 +63,10 @@ namespace GameServer
             }
             if (player1.status != "1" && player2.status != "1")
             {
-                StreamWriter writer = new StreamWriter(player1.user.GetStream());
-                writer.WriteLine("ask" + "," + "XO");
-                writer.Flush();
-                StreamWriter sw = new StreamWriter(player2.user.GetStream());
-                sw.WriteLine("ask" + "," + "XO");
-                sw.Flush();
+                UniversalStream sw1 = new UniversalStream(player1.user);
+                sw1.Write("ask" + "," + "XO");
+                UniversalStream sw2 = new UniversalStream(player2.user);
+                sw2.Write("ask" + "," + "XO");
                 return true;
             }
             else

@@ -79,6 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerAPI.cs" />
     <Compile Include="Games\XO.cs" />
+    <Compile Include="UniversalStream.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

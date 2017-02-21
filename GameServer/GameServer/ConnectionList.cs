@@ -21,9 +21,7 @@ namespace GameServer
         {
             clientList.Add(client);
             Thread.Sleep(100);
-            StreamWriter sw = new StreamWriter(client.user.GetStream());
-            sw.WriteLine("name," + client.name);
-            sw.Flush();
+            client.stream.Write("name," + client.name);
             Thread.Sleep(100);
             BroadcastSend();
         }
@@ -50,9 +48,7 @@ namespace GameServer
         {
             foreach (var item in clientList)
             {              
-                StreamWriter writer = new StreamWriter(item.user.GetStream());
-                writer.WriteLine(MakeClientList(item.name));
-                writer.Flush();
+                item.stream.Write(MakeClientList(item.name));
             }          
         }
 

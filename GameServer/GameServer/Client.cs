@@ -13,17 +13,14 @@ namespace GameServer
         public string name;
         public TcpClient user;
         public string status;
+        public UniversalStream stream;
 
-        public Client(string name, TcpClient user,string status)
+        public Client(string name, TcpClient user,string status, UniversalStream stream)
         {
             this.name = name;
             this.user = user;
-            this.status = status;           
-        }
-        public string Read()
-        {
-            StreamReader sr = new StreamReader(user.GetStream());
-            return sr.ReadLine();
+            this.status = status;
+            this.stream = stream;       
         }
     }
 }

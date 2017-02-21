@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -34,22 +35,39 @@ namespace GameServer
             LogManager.AddToLog("server", "started");
             Thread ThreadListen = new Thread(new ThreadStart(Receive));
             ThreadListen.Start();
+            //UniversalStream.ClientType type = UniversalStream.ClientType.Desktop;
             while (true)
             {
                 var connectedClient = serverListener.AcceptTcpClient();
-                StreamReader sr = new StreamReader(connectedClient.GetStream());
-                string inp = sr.ReadLine();
+                UniversalStream stream = new UniversalStream(connectedClient);
+
+                while (!connectedClient.GetStream().DataAvailable){ }
                 
-                string[] input = inp.Split(',');
+                string data = stream.Read();
+                if (new Regex("^GET").IsMatch(data))
+                {
+                    stream.WriteHandshake(data);
+                    stream.Type = UniversalStream.ClientType.Web;
+                    while (!connectedClient.GetStream().DataAvailable) { }
+
+                    data = stream.Read();
+                }
+
+                if (stream.Type == UniversalStream.ClientType.Web)
+                    data = stream.Decode();
+
+                string[] input = data.Split(',');
+                
                 if (dbmanager.RA(input[0], input[1], input[2]))
                 {
                     Client cl = connectionList.clientList.Find(c => c.name == input[1]);
                     if (cl == null)
-                        connectionList.AddList(new Client(input[1], connectedClient, input[3]));
-                    LogManager.AddToLog(input[1], inp);
+                        connectionList.AddList(new Client(input[1], connectedClient, input[3], stream));
+                    LogManager.AddToLog(input[1], data);
                 }
             }
         }
+        
 
         public void Receive()
         {
@@ -61,8 +79,12 @@ namespace GameServer
                 {
                     if (connectionList.clientList[i].user.GetStream().DataAvailable)
                     {
-                        string message = connectionList.clientList[i].Read();
+                        string message = connectionList.clientList[i].stream.Read();
                         LogManager.AddToLog(connectionList.clientList[i].name, message);
+
+                        if (connectionList.clientList[i].stream.Type == UniversalStream.ClientType.Web)
+                            message = connectionList.clientList[i].stream.Decode();
+
                         commandManager.Dispatcher(message);
                     }
                 }

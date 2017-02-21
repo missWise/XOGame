@@ -21,9 +21,7 @@ namespace GameServer
             this.player1 = player1;
             this.player2 = player2;
             Thread.Sleep(100);
-            StreamWriter writer1 = new StreamWriter(player1.user.GetStream());
-            writer1.WriteLine("gamexo,yourturn");
-            writer1.Flush();
+            player1.stream.Write("gamexo,yourturn");
         }
 
         public bool ContainsPlayer(Client client)
@@ -35,31 +33,23 @@ namespace GameServer
 
         public bool Action(Client player, string input)
         {
-            StreamWriter writer1 = new StreamWriter(player1.user.GetStream());
-            StreamWriter writer2 = new StreamWriter(player2.user.GetStream());
-           
-            writer1.Flush();
             if(input == "stopgame")
             {
                 if (player.Equals(player2))
                 {
-                    writer2.WriteLine("gamexo" + "," + "fail");
-                    writer2.Flush();
+                    player2.stream.Write("gamexo" + "," + "fail");
                     player1.status = "0";
 
                     player2.status = "0";
-                    writer1.WriteLine("gamexo" + "," + "victory");
-                    writer1.Flush();
+                    player1.stream.Write("gamexo" + "," + "victory");
                 }
                 else
                 {
-                    writer2.WriteLine("gamexo" + "," + "victory");
-                    writer2.Flush();
+                    player2.stream.Write("gamexo" + "," + "victory");
                     player1.status = "0";
 
                     player2.status = "0";
-                    writer1.WriteLine("gamexo" + "," + "fail");
-                    writer1.Flush();
+                    player1.stream.Write("gamexo" + "," + "fail");
                 }
                 return true;
             }
@@ -68,32 +58,26 @@ namespace GameServer
                 string turn1 = input;
                 string res1 = Turn1(turn1);
 
-                writer2.WriteLine("gamexo" + "," + turn1 + "," + "X");
-                writer2.Flush();
-                writer1.WriteLine("gamexo" + "," + turn1 + "," + "X");
-                writer1.Flush();
+                player2.stream.Write("gamexo" + "," + turn1 + "," + "X");
+                player1.stream.Write("gamexo" + "," + turn1 + "," + "X");
                 
                 if (res1 == "victory")
                 {
-                    writer1.WriteLine("gamexo" + "," + "victory");
-                    writer1.Flush();
+                    player1.stream.Write("gamexo" + "," + "victory");
                     player1.status = "0";
 
                     player2.status = "0";
-                    writer2.WriteLine("gamexo" + "," + "fail");
-                    writer2.Flush();
+                    player2.stream.Write("gamexo" + "," + "fail");
 
                     return true;
                 }
 
                 if (res1 == "standoff")
                 {
-                    writer1.WriteLine("gamexo" + "," + "standoff");
+                    player1.stream.Write("gamexo" + "," + "standoff");
                     player1.status = "0";
-                    writer1.Flush();
-                    writer2.WriteLine("gamexo" + "," + "standoff");
+                    player2.stream.Write("gamexo" + "," + "standoff");
                     player2.status = "0";
-                    writer2.Flush();
 
                     return true;
                 }
@@ -101,11 +85,9 @@ namespace GameServer
                 player1turn = !player1turn;
 
                 Thread.Sleep(100);
-                writer2.WriteLine("gamexo,yourturn");
-                writer2.Flush();
+                player2.stream.Write("gamexo,yourturn");
                 Thread.Sleep(100);
-                writer1.WriteLine("gamexo,notyourturn");
-                writer1.Flush();
+                player2.stream.Write("gamexo,notyourturn");
             }
 
             else if(!player1turn && player2.Equals(player))
@@ -113,32 +95,26 @@ namespace GameServer
                 string turn2 = input;
                 string res2 = Turn2(turn2);
 
-                writer1.WriteLine("gamexo" + "," + turn2 + "," + "O");
-                writer1.Flush();
-                writer2.WriteLine("gamexo" + "," + turn2 + "," + "O");
-                writer2.Flush();
+                player1.stream.Write("gamexo" + "," + turn2 + "," + "O");
+                player2.stream.Write("gamexo" + "," + turn2 + "," + "O");
 
 
                 if (res2 == "victory")
                 {
-                    writer1.WriteLine("gamexo" + "," + "fail");
+                    player1.stream.Write("gamexo" + "," + "fail");
                     player1.status = "0";
-                    writer1.Flush();
-                    writer2.WriteLine("gamexo" + "," + "victory");
+                    player2.stream.Write("gamexo" + "," + "victory");
                     player2.status = "0";
-                    writer2.Flush();
 
                     return true;
                 }
 
                 if (res2 == "standoff")
                 {
-                    writer1.WriteLine("gamexo" + "," + "standoff");
+                    player1.stream.Write("gamexo" + "," + "standoff");
                     player1.status = "0";
-                    writer1.Flush();
-                    writer2.WriteLine("gamexo" + "," + "standoff");
+                    player2.stream.Write("gamexo" + "," + "standoff");
                     player2.status = "0";
-                    writer2.Flush();
 
                     return true;
                 }
@@ -146,11 +122,9 @@ namespace GameServer
                 player1turn = !player1turn;
 
                 Thread.Sleep(100);
-                writer1.WriteLine("gamexo,yourturn");
-                writer1.Flush();
+                player1.stream.Write("gamexo,yourturn");
                 Thread.Sleep(100);
-                writer2.WriteLine("gamexo,notyourturn");
-                writer2.Flush();
+                player2.stream.Write("gamexo,notyourturn");
             }
 
             return false;
