@@ -56,14 +56,21 @@ namespace GameServer
                 if (stream.Type == UniversalStream.ClientType.Web)
                     data = stream.Decode();
 
+                data = data.Replace("\r\n", "");
                 string[] input = data.Split(',');
                 
                 if (dbmanager.RA(input[0], input[1], input[2]))
                 {
+                    //stream.Write("name,lena");
                     Client cl = connectionList.clientList.Find(c => c.name == input[1]);
                     if (cl == null)
                         connectionList.AddList(new Client(input[1], connectedClient, input[3], stream));
                     LogManager.AddToLog(input[1], data);
+
+                }
+                else
+                {
+                    stream.Write("loginrefuse");
                 }
             }
         }

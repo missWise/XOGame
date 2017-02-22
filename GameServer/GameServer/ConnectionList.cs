@@ -21,7 +21,7 @@ namespace GameServer
         {
             clientList.Add(client);
             Thread.Sleep(100);
-            client.stream.Write("name," + client.name);
+            client.stream.Write("loginsuccess," + client.name);
             Thread.Sleep(100);
             BroadcastSend();
         }

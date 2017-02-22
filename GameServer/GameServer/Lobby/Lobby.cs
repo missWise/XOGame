@@ -17,6 +17,7 @@ namespace GameServer
         }
         public void SetCommand(string command)
         {
+            command = command.Replace("\r\n", "");
             string[] msg = command.Split(',');
             switch(msg[1])
             {

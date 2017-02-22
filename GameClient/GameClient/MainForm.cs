@@ -15,12 +15,13 @@ namespace GameClient
     public partial class MainForm : Form
     {
         ClientManager cm;
-        PlayersList pl;
+        public PlayersList pl;
         public MainForm()
         {         
             InitializeComponent();
-            cm = new ClientManager();
+            cm = new ClientManager(this);
             pl = new PlayersList();
+            CheckForIllegalCrossThreadCalls = false;
         }
         
         private void btnLogin_Click(object sender, EventArgs e)
@@ -43,13 +44,13 @@ namespace GameClient
             try
             {
                 cm.Connect("auth", tbLogin.Text, tbPassword.Text, pl);
-                Thread.Sleep(1000);
-                if (!(pl.lb_name.Text == "label1"))
-                {
-                    pl.Show();
-                    this.Hide();
-                }
-                else MessageBox.Show("Invalid login or pass");
+                //Thread.Sleep(1000);
+                //if (!(pl.lb_name.Text == "label1"))
+                //{
+                //    pl.Show();
+                //    this.Hide();
+                //}
+                //else MessageBox.Show("Invalid login or pass");
             }
             catch 
             {
@@ -79,13 +80,13 @@ namespace GameClient
             {
                 cm.Connect("reg", tbLogin.Text, tbPassword.Text, pl);
 
-                Thread.Sleep(1000);
-                if (!(pl.lb_name.Text == "label1"))
-                {
-                    pl.Show();
-                    this.Hide();
-                }
-                else MessageBox.Show("Invalid login");
+                //Thread.Sleep(1000);
+                //if (!(pl.lb_name.Text == "label1"))
+                //{
+                //    pl.Show();
+                //    this.Hide();
+                //}
+                //else MessageBox.Show("Invalid login");
             }
             catch 
             {
@@ -100,5 +101,6 @@ namespace GameClient
                 return true;
             return false;
         }
+        
     }
 }

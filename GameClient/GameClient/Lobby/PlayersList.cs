@@ -18,13 +18,17 @@ namespace GameClient
         public string name;
         public NetworkStream stream;
         public delegate void listDel(string[] ps);
+        
         public PlayersList()
         {
             InitializeComponent();
             cbGame.SelectedIndex = 0;
             CheckForIllegalCrossThreadCalls = false;
         }
-        
+        public void ShowForm()
+        {
+            this.ShowDialog();
+        }
         public void AddList(string[] items)
         {
             lbPlayers.Items.Clear();
@@ -102,5 +106,7 @@ namespace GameClient
                 Environment.Exit(0);
             }
         }
+        
+        
     }
 }

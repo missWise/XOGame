@@ -17,7 +17,12 @@ namespace GameClient
         public NetworkStream netStream;
         PlayersList playersList;
         IGame game;
-
+        MainForm mf;
+        public ClientManager(MainForm mf)
+        {
+            this.mf = mf;
+        }
+       
         public ClientManager(){}
 
         public void Connect(string command, string name, string password, PlayersList pl)
@@ -51,6 +56,7 @@ namespace GameClient
         }
        
         void ReceiveData()
+
         {
             while (true)
             {
@@ -63,8 +69,14 @@ namespace GameClient
                     string[] msg = output.Split(',');
                     switch (msg[0])
                     {
-                        case "name":
+                        case "loginsuccess":
                             playersList.lb_name.Text = msg[1];
+                            Thread thread = new Thread(new ThreadStart(mf.pl.ShowForm));
+                            mf.Hide();
+                            thread.Start();
+                            break;
+                        case "loginrefuse":
+                            MessageBox.Show("Incorrect login or pass");
                             break;
                         case "list":
                             playersList.AddList(msg);
@@ -89,5 +101,7 @@ namespace GameClient
                 }             
             }
         }
+
+        
     }
 }
