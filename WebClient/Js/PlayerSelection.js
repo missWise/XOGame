@@ -1,6 +1,6 @@
 ﻿
 var clientSocket, ws;
-var bLogin, bLogout, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, lturn;
+var bLogin, bLogout, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bexit, userName;
 
 
 window.onload = function () {
@@ -11,10 +11,12 @@ window.onload = function () {
     bAuthorization = document.getElementById("bAuthorization");
     bRegistration = document.getElementById("bRegistration");
      
-	buttons = Array(document.getElementById("b1"), document.getElementById("b2"), b3 = document.getElementById("b3"),b4 = document.getElementById("b4"), b5 = document.getElementById("b5"), b6 = document.getElementById("b6"), b7 = document.getElementById("b7"), b8 = document.getElementById("b8"), b9 = document.getElementById("b9"), userName = document.getElementById("textLogin"));
-	lturn = document.getElementById("lGameTurn");
+	buttons = Array(document.getElementById("b1"), document.getElementById("b2"), b3 = document.getElementById("b3"),b4 = document.getElementById("b4"), b5 = document.getElementById("b5"), b6 = document.getElementById("b6"), b7 = document.getElementById("b7"), b8 = document.getElementById("b8"), b9 = document.getElementById("b9")); 
+	userName = document.getElementById("textLogin");
+	bexit = document.getElementById("bExit");
 	
     bLogin.onclick = OnLogIn;
+	bexit.onclick = OnExitGame;
     bLogout.onclick = OnLogOut;
     bInvite.onclick = OnInvite;
     bRegistration.onclick = OnRegistration;
@@ -51,7 +53,7 @@ function listener(message){
                     document.getElementById("statusLabel2").value += msg[1];
                     break;
                 case "loginrefuse":
-                    alert("Введи логин и пароль нормальный БЛЕАТЬ!")
+                    alert("Involid login or password!")
 					ws.close();
                     break;
 				case "list":
@@ -109,6 +111,10 @@ function ShowMainPage() {
     document.getElementById("statusMenu").style.display = 'flex';
     document.getElementById("popupMenu").style.display = 'flex';
     document.getElementById("playerList").style.display = 'block';
+	//for(var i=0;i<buttons.length;i++)
+	//{
+	//	buttons[i].style.display = 'none';
+	//}
 }
 
 function Game(message)
@@ -118,24 +124,30 @@ function Game(message)
 	{
 		alert("You lost this game");
 		ShowMainPage();
-        document.getElementById("statusLabel2").value += msg[1];
+        //document.getElementById("statusLabel2").value += msg[1];
 	}
 	else if(msg[1] == "victory")
 	{
 		alert("You won!");
 		ShowMainPage();
-		document.getElementById("statusLabel2").value += msg[1];
+		//document.getElementById("statusLabel2").value += msg[1];
+	}
+	else if(msg[1] == "standoff")
+	{
+		alert("It's a draw!");
+		ShowMainPage();
+		//document.getElementById("statusLabel2").value += msg[1];
 	}
 	else if(msg[1] == "stopgame")
 	{
 		alert("The game was interruped");
 		ShowMainPage();
-        document.getElementById("statusLabel2").value += msg[1];
+        //document.getElementById("statusLabel2").value += msg[1];
 	}
 	else if(msg[1] == "yourturn")
-		lturn.text = "Your turn";
+		;
 	else if(msg[1] == "notyourturn")
-		lturn.text = "Not your turn";
+		;
 	else
 	{
 		//var btn = document.getElementById("b"+msg[1]+1);
@@ -150,6 +162,12 @@ function ShowGamePage() {
     document.getElementById("popupMenu").style.display = 'none';
     document.getElementById("playerList").style.display = 'none';
     document.getElementById("gameMenu").style.display = "block";
+	for(var i=0;i<buttons.length;i++)
+	{
+		buttons[i].value = " ";
+		buttons[i].disabled = false;
+		//buttons[i].style.display = 'flex';
+	}
 }
 
 function OnBtnClick(btn)
@@ -180,19 +198,22 @@ function GetSelectedPlayer() {
     }
 }
 function OnLogIn(){
-	ws = new WebSocket("ws://localhost:8888");
+	var message = "lobby,exit,"+userName.value;
+	ws.send(message);
+	ws.close;
+	ShowAuthorizationPage();
+}
 
-    ws.onopen = function () {
-    };
-    ws.onclose = function () {
-        alert("Connection is closed...");
-    };
-    ws.onmessage = OnMessageReceive;
-    ShowAuthorizationPage();
+function OnExitGame()
+{
+	var message = "games,gamexo," + userName.value + ",stopgame";
+	ws.send(message);
+	ShowMainPage();
 }
 
 function OnLogOut() {
-
+	var message = "list";
+	ws.send(message);
 }
 
 function OnInvite() {
