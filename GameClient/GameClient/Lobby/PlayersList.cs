@@ -35,8 +35,8 @@ namespace GameClient
             for (int i = 1; i < items.Length; i++)
             {
                 string[] statuscont = items[i].Split('#');
-                if(statuscont[1]!="1")
-                lbPlayers.Items.Add(statuscont[0]); 
+                if (statuscont[1] != "1")
+                    lbPlayers.Items.Add(statuscont[0]);
             }
         }
         public bool CheckGameStatus(string name)

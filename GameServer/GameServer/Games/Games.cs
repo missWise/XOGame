@@ -63,10 +63,8 @@ namespace GameServer
             }
             if (player1.status != "1" && player2.status != "1")
             {
-                UniversalStream sw1 = new UniversalStream(player1.user);
-                sw1.Write("ask" + "," + "XO");
-                UniversalStream sw2 = new UniversalStream(player2.user);
-                sw2.Write("ask" + "," + "XO");
+                player1.stream.Write("ask" + "," + "XO");
+                player2.stream.Write("ask" + "," + "XO");
                 return true;
             }
             else

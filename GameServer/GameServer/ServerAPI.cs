@@ -61,7 +61,6 @@ namespace GameServer
                 
                 if (dbmanager.RA(input[0], input[1], input[2]))
                 {
-                    //stream.Write("name,lena");
                     Client cl = connectionList.clientList.Find(c => c.name == input[1]);
                     if (cl == null)
                         connectionList.AddList(new Client(input[1], connectedClient, input[3], stream));

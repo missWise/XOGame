@@ -60,7 +60,7 @@ namespace GameServer
             {
                 if (item.name == name)
                     continue;
-                users += item.name+"#"+item.status + ",";
+                users += item.name +"#"+item.status + ",";
             }
             users = users.TrimEnd(',');
 

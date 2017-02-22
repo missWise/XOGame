@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Js/PlayerSelection.js" ></script>
+    <link href="Styles/StartPageStyle.css"  rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="mainPage" id="playerList">
+		<!--<select id="rooms" size="12" multiple="true">
+		</select>
+		<br>
+		<input class="btnrms" type="button" value="Create Room" id="btnCreate">
+		<br>
+		<input class="btnrms" type="button" value="Enter Room" id="btnEnter">
+		<br>
+		<input class="btnrms" type="button" value="Refresh Room" id="btnRefresh">-->
+
+    </div>
+    <div class="mainPage" id="popupMenu">
+        <input id="bLogIn" type="button" value="Log in" />
+        <input id="bLogOut" type="button" value="Log out" />
+        <input id="bInvite" type="button" value="Invite" />
+    </div>
+    <div class="mainPage" id="statusMenu">
+        <input id="statusLabel1" type="text" value="Waiting for connection to server" />
+        <input id="statusLabel2" type="text" value="Your name :" />
+    </div>
+
+
+    <div id="authPage">
+        <label>Enter your login</label><br />
+        <input id="textLogin" type="text" /><br />
+        <label>Enter your password</label><br />
+        <input id="texPass" type="password" value="" /><br />
+        <input id="bAuthorization" type="button" value="Authorization" /></br>
+        <input id="bRegistration" type="button" value="Registration" />
+    </div>
+
+    <div id="gameMenu" class="mainPage">
+        <input class="gameField" id="b1" type="button" onclick = "OnBtnClick(0)" />
+        <input class="gameField" id="b2" type="button" onclick = "OnBtnClick(1)" />
+        <input class="gameField" id="b3" type="button" onclick = "OnBtnClick(2)" /><br />
+        <input class="gameField" id="b4" type="button" onclick = "OnBtnClick(3)" />
+        <input class="gameField" id="b5" type="button" onclick = "OnBtnClick(4)" />
+        <input class="gameField" id="b6" type="button" onclick = "OnBtnClick(5)" /><br />
+        <input class="gameField" id="b7" type="button" onclick = "OnBtnClick(6)" />
+        <input class="gameField" id="b8" type="button" onclick = "OnBtnClick(7)" />
+        <input class="gameField" id="b9" type="button" onclick = "OnBtnClick(8)" />
+		<input type="label" id="lGameTurn"/><br />
+    </div>
+
+</body>
+</html>
