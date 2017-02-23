@@ -1,36 +1,46 @@
 ﻿
 var clientSocket, ws;
-var bLogin, bLogout, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bexit, userName, turn;
-
+var bExitLobby, bRefresh, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bExit, userName, turn;
+var inGame = false;
+var online = false;
 
 window.onload = function () {
 
-    bLogin = document.getElementById("bLogIn");
-    bLogout = document.getElementById("bLogOut");
+    bExitLobby = document.getElementById("bLogIn");
+    bRefresh = document.getElementById("bLogOut");
     bInvite = document.getElementById("bInvite");
     bAuthorization = document.getElementById("bAuthorization");
     bRegistration = document.getElementById("bRegistration");
+	bExit = document.getElementById("bExit");
     turn = document.getElementById("lTurn");    
 	
 	buttons = Array(document.getElementById("b1"), document.getElementById("b2"), b3 = document.getElementById("b3"),b4 = document.getElementById("b4"), b5 = document.getElementById("b5"), b6 = document.getElementById("b6"), b7 = document.getElementById("b7"), b8 = document.getElementById("b8"), b9 = document.getElementById("b9")); 
 	userName = document.getElementById("textLogin");
 	bexit = document.getElementById("bExit");
 	
-    bLogin.onclick = OnLogIn;
-	bexit.onclick = OnExitGame;
-    bLogout.onclick = OnLogOut;
+    bExitLobby.onclick = OnExitLobby;
+	bExit.onclick = OnExitGame;
+    bRefresh.onclick = OnRefresh;
     bInvite.onclick = OnInvite;
     bRegistration.onclick = OnRegistration;
     bAuthorization.onclick = OnAuthorization;
+	var str = "";
 }
 
 function connect(command) {
-            ws = new WebSocket("ws://127.0.0.1:8888");
-            
+			try
+			{
+				ws = new WebSocket("ws://127.0.0.1:8888");
+            }
+			finally
+			{
+				str = "Server is not available";
+			}
             ws.onopen = function () {
+		
                 var name = document.getElementById("textLogin").value;
-                var password = document.getElementById("texPass").value;
-                ws.send(command +","+ name + "," + password + ",0");
+                var pass = document.getElementById("texPass").value;
+				ws.send(command +","+ name + "," + pass + ",0");
             };
 
             ws.onmessage = function (evt) {
@@ -39,9 +49,46 @@ function connect(command) {
                 listener(received_msg);
             };
             ws.onclose = function () {
-                alert("Connection is closed...");
+				var c = "Connection is closed...";
+				if(str != ""){                
+					c = str;
+					str = "";
+				}
+				alert(c);
             };
         };
+		
+function CheckRA()
+{
+	var name = document.getElementById("textLogin").value;
+    var pass = document.getElementById("texPass").value;
+	if(name == "" || pass == "")
+	{
+		alert("Empty username or password");
+		return false;
+	}
+	else if(/^[a-zA-Z1-9]+$/.test(name) === false && /^[a-zA-Z1-9]+$/.test(pass) === false)
+	{
+		alert('Invalid login or pass'); 
+		return false;
+	}
+	if(name.length > 15)
+    { 
+		alert('Very long username! Enter username till 15 symbols.'); 
+		return false;
+	}
+
+	return true;
+}
+
+window.onbeforeunload = function(){
+	if(online)
+	{
+		if(inGame)
+			OnExitGame();
+		OnExitLobby();
+	}
+}
 		
 function listener(message){
 			message = message.replace("\r\n", "");
@@ -50,7 +97,8 @@ function listener(message){
             {
                 case "loginsuccess":
                     ShowMainPage();
-                    document.getElementById("statusLabel2").value += msg[1];
+                    document.getElementById("statusLabel2").value = "Your name: " + msg[1];
+					online = true;
                     break;
                 case "loginrefuse":
                     alert("Invalid login or password!")
@@ -79,6 +127,7 @@ function listener(message){
 					break;
                 case "ask":
                     ShowGamePage();
+					inGame = true;
                     break;
                 default:
                 break;
@@ -105,11 +154,6 @@ function ShowMainPage() {
     document.getElementById("popupMenu").style.display = 'flex';
     document.getElementById("playerList").style.display = 'block';
 	document.getElementById("gameMenu").style.display = 'none';
-	//document.getElementById("gameField").style.display = 'none';
-	//for(var i=0;i<buttons.length;i++)
-	//{
-	//	buttons[i].style.display = 'none';
-	//}
 }
 
 function Game(message)
@@ -119,25 +163,25 @@ function Game(message)
 	{
 		alert("You lost this game");
 		ShowMainPage();
-        //document.getElementById("statusLabel2").value += msg[1];
+		inGame = false;
 	}
 	else if(msg[1] == "victory")
 	{
 		alert("You won!");
 		ShowMainPage();
-		//document.getElementById("statusLabel2").value += msg[1];
+		inGame = false;
 	}
 	else if(msg[1] == "standoff")
 	{
 		alert("It's a draw!");
 		ShowMainPage();
-		//document.getElementById("statusLabel2").value += msg[1];
+		inGame = false;
 	}
 	else if(msg[1] == "stopgame")
 	{
 		alert("The game was interruped");
 		ShowMainPage();
-        //document.getElementById("statusLabel2").value += msg[1];
+		inGame = false;
 	}
 	else if(msg[1] == "yourturn")
 		turn.textContent = "Your turn!";
@@ -145,7 +189,6 @@ function Game(message)
 		turn.textContent = "Not your turn!";
 	else
 	{
-		//var btn = document.getElementById("b"+msg[1]+1);
 		buttons[msg[1]].value = msg[2];
 		buttons[msg[1]].disabled = true;
 	}
@@ -161,7 +204,6 @@ function ShowGamePage() {
 	{
 		buttons[i].value = " ";
 		buttons[i].disabled = false;
-		//buttons[i].style.display = 'flex';
 	}
 }
 
@@ -191,13 +233,17 @@ function GetSelectedPlayer() {
             return playerList.childNodes[i + 1].nodeValue;
         }
     }
+	throw SyntaxError("Please choose player firstly");
+	
 }
-function OnLogIn(){
+function OnExitLobby(){
 	var message = "lobby,exit,"+userName.value;
 	ws.send(message);
-	ws.close();
 	document.getElementById("statusLabel2").value = "Your name:";
 	ShowAuthorizationPage();
+	inGame = false;
+	ws.close();
+	online = false;
 }
 
 function OnExitGame()
@@ -205,34 +251,32 @@ function OnExitGame()
 	var message = "games,gamexo," + userName.value + ",stopgame";
 	ws.send(message);
 	ShowMainPage();
+	inGame = false;
 }
 
-function OnLogOut() {
+function OnRefresh() {
 	var message = "list";
 	ws.send(message);
 }
 
 function OnInvite() {
-	var message = "lobby,invite" + "," + userName.value + "," + GetSelectedPlayer() + "," + "XO";
-	ws.send(message);
-    
+	try
+	{
+		var message = "lobby,invite" + "," + userName.value + "," + GetSelectedPlayer() + "," + "XO";
+		ws.send(message);
+	}
+	catch(ex)
+	{
+		alert(ex.message);
+	}
 }
 
 function OnRegistration() {
-    connect('reg');
-
+	if(CheckRA())
+		connect('reg');
 }
 
 function OnAuthorization() {
-    connect('auth');
+	if(CheckRA())
+		connect('auth');
 }
-
-
-function RefreshRoom(){
-    var message = new Object();
-    message.modul = "lobby";
-    message.command = "refresh";
-    var tmp = JSON.stringify(message);
-    ws.send(tmp); 
-}
-
