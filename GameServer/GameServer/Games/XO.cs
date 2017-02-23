@@ -87,7 +87,7 @@ namespace GameServer
                 Thread.Sleep(100);
                 player2.stream.Write("gamexo,yourturn");
                 Thread.Sleep(100);
-                player2.stream.Write("gamexo,notyourturn");
+                player1.stream.Write("gamexo,notyourturn");
             }
 
             else if(!player1turn && player2.Equals(player))

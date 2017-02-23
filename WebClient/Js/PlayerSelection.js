@@ -1,6 +1,6 @@
 ﻿
 var clientSocket, ws;
-var bLogin, bLogout, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bexit, userName;
+var bLogin, bLogout, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bexit, userName, turn;
 
 
 window.onload = function () {
@@ -10,7 +10,8 @@ window.onload = function () {
     bInvite = document.getElementById("bInvite");
     bAuthorization = document.getElementById("bAuthorization");
     bRegistration = document.getElementById("bRegistration");
-     
+    turn = document.getElementById("lTurn");    
+	
 	buttons = Array(document.getElementById("b1"), document.getElementById("b2"), b3 = document.getElementById("b3"),b4 = document.getElementById("b4"), b5 = document.getElementById("b5"), b6 = document.getElementById("b6"), b7 = document.getElementById("b7"), b8 = document.getElementById("b8"), b9 = document.getElementById("b9")); 
 	userName = document.getElementById("textLogin");
 	bexit = document.getElementById("bExit");
@@ -21,7 +22,6 @@ window.onload = function () {
     bInvite.onclick = OnInvite;
     bRegistration.onclick = OnRegistration;
     bAuthorization.onclick = OnAuthorization;
-    b1.onclick = OnBtnClick;
 }
 
 function connect(command) {
@@ -53,7 +53,7 @@ function listener(message){
                     document.getElementById("statusLabel2").value += msg[1];
                     break;
                 case "loginrefuse":
-                    alert("Involid login or password!")
+                    alert("Invalid login or password!")
 					ws.close();
                     break;
 				case "list":
@@ -85,13 +85,6 @@ function listener(message){
             }
         }
 
-
-    function Vasyan(zhopa){
-    var rooms = document.getElementById("rooms");
-    rooms.options[rooms.options.length] = new Option(zhopa, zhopa);
-    rooms.size += rooms.options.length;
-}
-
 function ShowAuthorizationPage() {
     document.getElementById("authPage").style.display = 'block';
     document.getElementById("statusMenu").style.display = 'none';
@@ -111,6 +104,8 @@ function ShowMainPage() {
     document.getElementById("statusMenu").style.display = 'flex';
     document.getElementById("popupMenu").style.display = 'flex';
     document.getElementById("playerList").style.display = 'block';
+	document.getElementById("gameMenu").style.display = 'none';
+	//document.getElementById("gameField").style.display = 'none';
 	//for(var i=0;i<buttons.length;i++)
 	//{
 	//	buttons[i].style.display = 'none';
@@ -145,9 +140,9 @@ function Game(message)
         //document.getElementById("statusLabel2").value += msg[1];
 	}
 	else if(msg[1] == "yourturn")
-		;
+		turn.textContent = "Your turn!";
 	else if(msg[1] == "notyourturn")
-		;
+		turn.textContent = "Not your turn!";
 	else
 	{
 		//var btn = document.getElementById("b"+msg[1]+1);
@@ -161,7 +156,7 @@ function ShowGamePage() {
     document.getElementById("statusMenu").style.display = 'none';
     document.getElementById("popupMenu").style.display = 'none';
     document.getElementById("playerList").style.display = 'none';
-    document.getElementById("gameMenu").style.display = "block";
+    document.getElementById("gameMenu").style.display = 'block';
 	for(var i=0;i<buttons.length;i++)
 	{
 		buttons[i].value = " ";
@@ -200,7 +195,8 @@ function GetSelectedPlayer() {
 function OnLogIn(){
 	var message = "lobby,exit,"+userName.value;
 	ws.send(message);
-	ws.close;
+	ws.close();
+	document.getElementById("statusLabel2").value = "Your name:";
 	ShowAuthorizationPage();
 }
 
