@@ -22,6 +22,8 @@ namespace GameServer
             this.player2 = player2;
             Thread.Sleep(100);
             player1.stream.Write("gamexo,yourturn");
+            player2.stream.Write("gamexo,notyourturn");
+            Thread.Sleep(100);
         }
 
         public bool ContainsPlayer(Client client)
@@ -60,7 +62,9 @@ namespace GameServer
 
                 player2.stream.Write("gamexo" + "," + turn1 + "," + "X");
                 player1.stream.Write("gamexo" + "," + turn1 + "," + "X");
-                
+
+                Thread.Sleep(100);
+
                 if (res1 == "victory")
                 {
                     player1.stream.Write("gamexo" + "," + "victory");
@@ -98,6 +102,7 @@ namespace GameServer
                 player1.stream.Write("gamexo" + "," + turn2 + "," + "O");
                 player2.stream.Write("gamexo" + "," + turn2 + "," + "O");
 
+                Thread.Sleep(100);
 
                 if (res2 == "victory")
                 {

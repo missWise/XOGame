@@ -98,10 +98,9 @@ namespace GameClient
                             game.ReceiveGameData(output);
                             break;
                     }
-                }             
+                }
+                Thread.Sleep(100);             
             }
         }
-
-        
     }
 }

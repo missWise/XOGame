@@ -44,13 +44,6 @@ namespace GameClient
             try
             {
                 cm.Connect("auth", tbLogin.Text, tbPassword.Text, pl);
-                //Thread.Sleep(1000);
-                //if (!(pl.lb_name.Text == "label1"))
-                //{
-                //    pl.Show();
-                //    this.Hide();
-                //}
-                //else MessageBox.Show("Invalid login or pass");
             }
             catch 
             {
@@ -79,14 +72,6 @@ namespace GameClient
             try
             {
                 cm.Connect("reg", tbLogin.Text, tbPassword.Text, pl);
-
-                //Thread.Sleep(1000);
-                //if (!(pl.lb_name.Text == "label1"))
-                //{
-                //    pl.Show();
-                //    this.Hide();
-                //}
-                //else MessageBox.Show("Invalid login");
             }
             catch 
             {

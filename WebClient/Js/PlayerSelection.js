@@ -54,7 +54,7 @@ function connect(command) {
 					c = str;
 					str = "";
 				}
-				alert(c);
+				//alert(c);
             };
         };
 		

@@ -35,7 +35,6 @@ namespace GameServer
             LogManager.AddToLog("server", "started");
             Thread ThreadListen = new Thread(new ThreadStart(Receive));
             ThreadListen.Start();
-            //UniversalStream.ClientType type = UniversalStream.ClientType.Desktop;
             while (true)
             {
                 var connectedClient = serverListener.AcceptTcpClient();
@@ -71,6 +70,7 @@ namespace GameServer
                 {
                     stream.Write("loginrefuse");
                 }
+                Thread.Sleep(50);
             }
         }
         
@@ -94,6 +94,7 @@ namespace GameServer
                         commandManager.Dispatcher(message);
                     }
                 }
+                Thread.Sleep(50);
             }
         }
     }             
