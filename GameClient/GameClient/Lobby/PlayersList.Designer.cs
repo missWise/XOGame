@@ -34,6 +34,7 @@
             this.lb_name = new System.Windows.Forms.Label();
             this.RefreshPlayers = new System.Windows.Forms.Button();
             this.cbGame = new System.Windows.Forms.ComboBox();
+            this.btnPass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbPlayers
@@ -93,11 +94,22 @@
             this.cbGame.Size = new System.Drawing.Size(121, 21);
             this.cbGame.TabIndex = 1;
             // 
+            // btnPass
+            // 
+            this.btnPass.Location = new System.Drawing.Point(282, 271);
+            this.btnPass.Name = "btnPass";
+            this.btnPass.Size = new System.Drawing.Size(75, 36);
+            this.btnPass.TabIndex = 6;
+            this.btnPass.Text = "Change password";
+            this.btnPass.UseVisualStyleBackColor = true;
+            this.btnPass.Click += new System.EventHandler(this.btnPass_Click);
+            // 
             // PlayersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 319);
+            this.Controls.Add(this.btnPass);
             this.Controls.Add(this.RefreshPlayers);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.lb_players);
@@ -121,5 +133,6 @@
         public System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Button RefreshPlayers;
         private System.Windows.Forms.ComboBox cbGame;
+        private System.Windows.Forms.Button btnPass;
     }
 }

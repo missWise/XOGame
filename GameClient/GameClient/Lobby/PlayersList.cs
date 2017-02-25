@@ -99,6 +99,7 @@ namespace GameClient
                 StreamWriter sw = new StreamWriter(stream);
                 sw.WriteLine("lobby,exit" + "," + lb_name.Text);
                 sw.Flush();
+                Thread.Sleep(100);
             }
             catch { }
             finally
@@ -106,7 +107,11 @@ namespace GameClient
                 Environment.Exit(0);
             }
         }
-        
-        
+
+        private void btnPass_Click(object sender, EventArgs e)
+        {
+            PasswordForm pf = new PasswordForm(stream, name);
+            pf.Show();
+        }
     }
 }

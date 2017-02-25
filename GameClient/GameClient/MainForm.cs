@@ -14,13 +14,15 @@ namespace GameClient
 {
     public partial class MainForm : Form
     {
-        ClientManager cm;
+        public ClientManager cm;
         public PlayersList pl;
+        public RegistrationForm rf;
         public MainForm()
         {         
             InitializeComponent();
             cm = new ClientManager(this);
             pl = new PlayersList();
+            rf = new RegistrationForm(this);
             CheckForIllegalCrossThreadCalls = false;
         }
         
@@ -54,29 +56,8 @@ namespace GameClient
 
         private void btnReg_Click(object sender, EventArgs e)
         {
-            if (tbLogin.Text == "" || tbPassword.Text == "")
-            {
-                MessageBox.Show("Empty username or password!");
-                return;
-            }
-            else if (tbLogin.Text.Length > 15)
-            {
-                MessageBox.Show("Very long username! Enter username till 15 symbols.");
-                return;
-            }
-            else if (!CheckingLogin(tbLogin.Text, tbPassword.Text))
-            {
-                MessageBox.Show("Username and password could contain uppercase, lowercase letters and numbers");
-                return;
-            }
-            try
-            {
-                cm.Connect("reg", tbLogin.Text, tbPassword.Text, pl);
-            }
-            catch 
-            {
-                MessageBox.Show("Server is not available");
-            }
+            rf.Show();
+            Hide();
         }
 
         private bool CheckingLogin(string login, string pass)
@@ -86,6 +67,23 @@ namespace GameClient
                 return true;
             return false;
         }
-        
+
+        private void btnForgotPass_Click(object sender, EventArgs e)
+        {
+            if (tbLogin.Text == "")
+            {
+                MessageBox.Show("Please, enter login!");
+                return;
+            }
+            try
+            {
+                cm.Send("sendpassword," + tbLogin.Text);
+                return;
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
     }
 }

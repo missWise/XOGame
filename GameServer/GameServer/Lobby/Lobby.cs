@@ -28,6 +28,10 @@ namespace GameServer
                 case "exit":
                     commandManager.connectionList.Remove(commandManager.connectionList.GetClient(msg[2]));
                     break;
+                case "changepass":
+                    DataBaseManager db = new DataBaseManager();
+                    db.ChangePassword(msg[2], msg[3]);
+                    break;
             }
         }
     }

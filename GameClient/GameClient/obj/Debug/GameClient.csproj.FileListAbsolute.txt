@@ -97,3 +97,5 @@ D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameCl
 D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameClient.PlayersList.resources
 D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameClient.Properties.Resources.resources
 D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameClient.csproj.GenerateResource.Cache
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameClient.RegistrationForm.resources
+D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameClient\GameClient\obj\Debug\GameClient.PasswordForm.resources

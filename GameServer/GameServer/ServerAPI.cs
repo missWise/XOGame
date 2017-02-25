@@ -57,8 +57,20 @@ namespace GameServer
 
                 data = data.Replace("\r\n", "");
                 string[] input = data.Split(',');
-                
-                if (dbmanager.RA(input[0], input[1], input[2]))
+
+                if (input[0] == "sendpassword")
+                {
+                    if (dbmanager.SendPassword(input[1]))
+                    {
+                        stream.Write("forgotpasssuccess");
+                    }
+                    else
+                    {
+                        stream.Write("forgotpassrefuse");
+                    }
+                }
+
+                else if (dbmanager.RA(input[0], input[1], input[2], input[3]))
                 {
                     Client cl = connectionList.clientList.Find(c => c.name == input[1]);
                     if (cl == null)

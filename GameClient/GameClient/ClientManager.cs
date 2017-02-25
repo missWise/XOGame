@@ -18,9 +18,11 @@ namespace GameClient
         PlayersList playersList;
         IGame game;
         MainForm mf;
+        Thread receiveThread;
         public ClientManager(MainForm mf)
         {
             this.mf = mf;
+            receiveThread = new Thread(new ThreadStart(ReceiveData));
         }
        
         public ClientManager(){}
@@ -31,14 +33,29 @@ namespace GameClient
             client = new TcpClient();
             client.Connect(ipe);
             netStream = client.GetStream();
-            Thread receiveThread = new Thread(new ThreadStart(ReceiveData));
-            receiveThread.Start();
-
+           
             SendLogin(command, name, password);
            
             this.playersList = pl;
             playersList.name = name;
             playersList.stream = netStream;
+
+            if (!receiveThread.IsAlive)
+            {
+                receiveThread.Start();
+            }
+        }
+
+        public void Send(string mesage)
+        {
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);
+            client = new TcpClient();
+            client.Connect(ipe);
+            netStream = client.GetStream();
+            StreamWriter sw = new StreamWriter(netStream);
+            sw.WriteLine(mesage);
+            sw.Flush();
+            receiveThread.Start();
         }
 
         void SendLogin(string command, string name, string password)
@@ -56,7 +73,6 @@ namespace GameClient
         }
        
         void ReceiveData()
-
         {
             while (true)
             {
@@ -73,10 +89,17 @@ namespace GameClient
                             playersList.lb_name.Text = msg[1];
                             Thread thread = new Thread(new ThreadStart(mf.pl.ShowForm));
                             mf.Hide();
+                            mf.rf.Hide();
                             thread.Start();
                             break;
                         case "loginrefuse":
                             MessageBox.Show("Incorrect login or pass");
+                            break;
+                        case "forgotpasssuccess":
+                            MessageBox.Show("Your password was sent to your email!");
+                            break;
+                        case "forgotpassrefuse":
+                            MessageBox.Show("Invalid login!");
                             break;
                         case "list":
                             playersList.AddList(msg);
