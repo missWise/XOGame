@@ -3,6 +3,10 @@ var clientSocket, ws;
 var bExitLobby, bRefresh, bInvite, bAuthorization, bRegistration, bCreate, bEnter, bRef, buttons, bExit, userName, turn;
 var inGame = false;
 var online = false;
+var texNewPass, bNewPass, bChangePass;
+var textLoginReg, texPassReg, bRegistrationReg, bBackReg;
+var bForgotPass;
+var str = "";
 
 window.onload = function () {
 
@@ -18,13 +22,28 @@ window.onload = function () {
 	userName = document.getElementById("textLogin");
 	bexit = document.getElementById("bExit");
 	
+	texNewPass = document.getElementById("texNewPass");
+	bNewPass = document.getElementById("bNewPass");
+	bChangePass = document.getElementById("bChangePass");
+	
+	bForgotPass = document.getElementById("bForgotPass");
+	
+	textLoginReg = document.getElementById("textLoginReg");
+	texPassReg = document.getElementById("texPassReg");
+	bRegistrationReg = document.getElementById("bRegistrationReg");
+	bBackReg = document.getElementById("bBackReg");
+	
     bExitLobby.onclick = OnExitLobby;
 	bExit.onclick = OnExitGame;
     bRefresh.onclick = OnRefresh;
     bInvite.onclick = OnInvite;
     bRegistration.onclick = OnRegistration;
     bAuthorization.onclick = OnAuthorization;
-	var str = "";
+	bNewPass.onclick = OnNewPass;
+	bChangePass.onclick = OnChangePass;
+	bForgotPass.onclick = OnForgotPass;
+	bBackReg.onclick = OnBackReg;
+	bRegistrationReg.onclick = OnRegistrationReg;
 }
 
 function connect(command) {
@@ -38,9 +57,25 @@ function connect(command) {
 			}
             ws.onopen = function () {
 		
-                var name = document.getElementById("textLogin").value;
-                var pass = document.getElementById("texPass").value;
-				ws.send(command +","+ name + "," + pass + ",0");
+				if(command == "auth"){
+					var name = document.getElementById("textLogin").value;
+					var pass = document.getElementById("texPass").value;
+					ws.send(command +","+ name + "," + pass + ",0");
+				}
+				else if(command == "reg"){
+					var name = document.getElementById("textLoginReg").value;
+					var pass = document.getElementById("texPassReg").value;
+					var email = document.getElementById("texEmailReg").value;
+					ws.send(command +","+ name + "," + pass + "," + email +  ",0");
+				}
+				else if(command == "sendpassword")
+				{
+					var name = document.getElementById("textLogin").value;
+					if(name != "")
+					{
+						ws.send(command + "," + name);
+					}
+				}
             };
 
             ws.onmessage = function (evt) {
@@ -58,29 +93,6 @@ function connect(command) {
             };
         };
 		
-function CheckRA()
-{
-	var name = document.getElementById("textLogin").value;
-    var pass = document.getElementById("texPass").value;
-	if(name == "" || pass == "")
-	{
-		alert("Empty username or password");
-		return false;
-	}
-	else if(/^[a-zA-Z1-9]+$/.test(name) === false && /^[a-zA-Z1-9]+$/.test(pass) === false)
-	{
-		alert('Invalid login or pass'); 
-		return false;
-	}
-	if(name.length > 15)
-    { 
-		alert('Very long username! Enter username till 15 symbols.'); 
-		return false;
-	}
-
-	return true;
-}
-
 window.onbeforeunload = function(){
 	if(online)
 	{
@@ -95,6 +107,14 @@ function listener(message){
 			var msg = message.split(",");
             switch(msg[0])
             {
+				case "forgotpasssuccess":
+					alert("Your password was sent to your email!");
+					ws.close();
+					break;
+				case "forgotpassrefuse":
+					alert("Invalid login!");
+					ws.close();
+					break;
                 case "loginsuccess":
                     ShowMainPage();
                     document.getElementById("statusLabel2").value = "Your name: " + msg[1];
@@ -139,14 +159,32 @@ function ShowAuthorizationPage() {
     document.getElementById("statusMenu").style.display = 'none';
     document.getElementById("popupMenu").style.display = 'none';
     document.getElementById("playerList").style.display = 'none';
+	document.getElementById("changePassPage").style.display = 'none';
+	document.getElementById("regPage").style.display = 'none';
 }
 
+function ShowRegistrationPage() {
+	document.getElementById("regPage").style.display = 'block';
+    document.getElementById("authPage").style.display = 'none';
+    document.getElementById("statusMenu").style.display = 'none';
+    document.getElementById("popupMenu").style.display = 'none';
+    document.getElementById("playerList").style.display = 'none';
+	document.getElementById("changePassPage").style.display = 'none';
+}
+
+function ShowChangePassPage() {
+	document.getElementById("changePassPage").style.display = 'block';
+    document.getElementById("authPage").style.display = 'none';
+    document.getElementById("statusMenu").style.display = 'none';
+    document.getElementById("popupMenu").style.display = 'none';
+    document.getElementById("playerList").style.display = 'none';
+	document.getElementById("regPage").style.display = 'none';
+}
 
 function MessageBox(message) {
     var res = confirm(message);
     return res;
 }
-
 
 function ShowMainPage() {
     document.getElementById("authPage").style.display = 'none';
@@ -154,6 +192,8 @@ function ShowMainPage() {
     document.getElementById("popupMenu").style.display = 'flex';
     document.getElementById("playerList").style.display = 'block';
 	document.getElementById("gameMenu").style.display = 'none';
+	document.getElementById("changePassPage").style.display = 'none';
+	document.getElementById("regPage").style.display = 'none';
 }
 
 function Game(message)
@@ -200,6 +240,8 @@ function ShowGamePage() {
     document.getElementById("popupMenu").style.display = 'none';
     document.getElementById("playerList").style.display = 'none';
     document.getElementById("gameMenu").style.display = 'block';
+	document.getElementById("changePassPage").style.display = 'none';
+	document.getElementById("regPage").style.display = 'none';
 	for(var i=0;i<buttons.length;i++)
 	{
 		buttons[i].value = " ";
@@ -242,7 +284,9 @@ function OnExitLobby(){
 	document.getElementById("statusLabel2").value = "Your name:";
 	ShowAuthorizationPage();
 	inGame = false;
-	ws.close();
+	setTimeout(function() {
+    ws.close();
+	}, 2000);
 	online = false;
 }
 
@@ -272,11 +316,84 @@ function OnInvite() {
 }
 
 function OnRegistration() {
-	if(CheckRA())
-		connect('reg');
+	ShowRegistrationPage();
 }
 
 function OnAuthorization() {
 	if(CheckRA())
 		connect('auth');
+}
+
+function OnNewPass()
+{
+	ws.send("lobby,changepass," + userName.value + "," + texNewPass.value);
+	ShowMainPage();
+}
+
+function CheckRA()
+{
+	var name = document.getElementById("textLogin").value;
+    var pass = document.getElementById("texPass").value;
+	if(name == "" || pass == "")
+	{
+		alert("Empty username or password");
+		return false;
+	}
+	else if(/^[a-zA-Z1-9]+$/.test(name) === false && /^[a-zA-Z1-9]+$/.test(pass) === false)
+	{
+		alert('Invalid login or pass'); 
+		return false;
+	}
+	if(name.length > 15)
+    { 
+		alert('Very long username! Enter username till 15 symbols.'); 
+		return false;
+	}
+
+	return true;
+}
+
+function CheckRAReg()
+{
+	var name = document.getElementById("textLoginReg").value;
+    var pass = document.getElementById("texPassReg").value;
+	var email = document.getElementById("texEmailReg").value;
+	if(name == "" || pass == "" || email == "")
+	{
+		alert("Empty username, password or email");
+		return false;
+	}
+	else if(/^[a-zA-Z1-9]+$/.test(name) === false && /^[a-zA-Z1-9]+$/.test(pass) === false && /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/.test(email == false))
+	{
+		alert('Invalid login, pass or email'); 
+		return false;
+	}
+	if(name.length > 15)
+    { 
+		alert('Very long username! Enter username till 15 symbols.'); 
+		return false;
+	}
+
+	return true;
+}
+
+function OnChangePass()
+{
+	ShowChangePassPage();
+}
+
+function OnForgotPass()
+{
+	connect("sendpassword");
+}
+
+function OnBackReg()
+{
+	ShowAuthorizationPage();
+}
+
+function OnRegistrationReg()
+{
+	if(CheckRAReg())
+		connect('reg');
 }

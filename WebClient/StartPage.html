@@ -9,24 +9,17 @@
 
 </head>
 <body>
-    <div class="mainPage" id="playerList">
-		<!--<select id="rooms" size="12" multiple="true">
-		</select>
-		<br>
-		<input class="btnrms" type="button" value="Create Room" id="btnCreate">
-		<br>
-		<input class="btnrms" type="button" value="Enter Room" id="btnEnter">
-		<br>
-		<input class="btnrms" type="button" value="Refresh Room" id="btnRefresh">-->
+
+	<div class="mainPage" id="playerList" >
 
     </div>
     <div class="mainPage" id="popupMenu">
         <input id="bLogIn" type="button" value="Exit" />
         <input id="bLogOut" type="button" value="Refresh" />
         <input id="bInvite" type="button" value="Invite" />
+		<input id="bChangePass" type="button" value="Change password" />
     </div>
     <div class="mainPage" id="statusMenu">
-        <input id="statusLabel1" type="text" value="Waiting for connection to server" />
         <input id="statusLabel2" type="text" value="Your name :" />
     </div>
 
@@ -37,7 +30,25 @@
         <label>Enter your password</label><br />
         <input id="texPass" type="password" value="" /><br />
         <input id="bAuthorization" type="button" value="Authorization" /></br>
+		<input id="bForgotPass" type="button" value="Forgot password" /></br>
         <input id="bRegistration" type="button" value="Registration" />
+    </div>
+	
+	<div id="regPage">
+        <label>Enter your login</label><br />
+        <input id="textLoginReg" type="text" /><br />
+        <label>Enter your password</label><br />
+        <input id="texPassReg" type="password" value="" /><br />
+		<label>Enter your email</label><br />
+        <input id="texEmailReg" type="email" value="" /><br />
+        <input id="bRegistrationReg" type="button" value="Registration" />
+		<input id="bBackReg" type="button" value="Back" /></br>
+    </div>
+	
+	<div id="changePassPage">
+        <label>Enter new password</label><br />
+        <input id="texNewPass" type="password" value="" /><br />
+        <input id="bNewPass" type="button" value="Change password" />
     </div>
 
     <div id="gameMenu" class="mainPage">
