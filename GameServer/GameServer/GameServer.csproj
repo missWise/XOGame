@@ -43,6 +43,10 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -69,6 +73,7 @@
     <Compile Include="Client.cs" />
     <Compile Include="CommandManager.cs" />
     <Compile Include="ConnectionList.cs" />
+    <Compile Include="CrashManager.cs" />
     <Compile Include="DataBaseManager.cs" />
     <Compile Include="Games\Games.cs" />
     <Compile Include="Games\IGame.cs" />
@@ -80,6 +85,7 @@
     <Compile Include="ServerAPI.cs" />
     <Compile Include="Games\XO.cs" />
     <Compile Include="UniversalStream.cs" />
+    <Compile Include="XOTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

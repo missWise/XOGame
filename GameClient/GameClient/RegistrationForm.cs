@@ -39,7 +39,7 @@ namespace GameClient
             }
             try
             {
-                mf.cm.Connect("reg", tbLogin.Text, tbPassword.Text, mf.pl);
+                mf.cm.Connect(tbLogin.Text, "reg" + tbLogin.Text + "," + tbPassword.Text + ",0", mf.pl);
             }
             catch
             {

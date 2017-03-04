@@ -17,21 +17,28 @@ namespace GameServer
         }
         public void SetCommand(string command)
         {
-            command = command.Replace("\r\n", "");
-            string[] msg = command.Split(',');
-            switch(msg[1])
+            try
             {
-                case "invite":
-                    if(commandManager.connectionList.GetClient(msg[2]).status != "1")
-                    inviteManager.SendInvite(commandManager.connectionList.GetClient(msg[2]), commandManager.connectionList.GetClient(msg[3]), msg[4]);
-                    break;
-                case "exit":
-                    commandManager.connectionList.Remove(commandManager.connectionList.GetClient(msg[2]));
-                    break;
-                case "changepass":
-                    DataBaseManager db = new DataBaseManager();
-                    db.ChangePassword(msg[2], msg[3]);
-                    break;
+                command = command.Replace("\r\n", "");
+                string[] msg = command.Split(',');
+                switch (msg[1])
+                {
+                    case "invite":
+                        if (commandManager.connectionList.GetClient(msg[2]).status != "1")
+                            inviteManager.SendInvite(commandManager.connectionList.GetClient(msg[2]), commandManager.connectionList.GetClient(msg[3]), msg[4]);
+                        break;
+                    case "exit":
+                        commandManager.connectionList.Remove(commandManager.connectionList.GetClient(msg[2]));
+                        break;
+                    case "changepass":
+                        DataBaseManager db = new DataBaseManager();
+                        db.ChangePassword(msg[2], msg[3]);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("METHOD: SetCommand" + ex.StackTrace + ex.Message, ex.InnerException);
             }
         }
     }

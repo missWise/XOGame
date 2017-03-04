@@ -34,6 +34,19 @@
         <input id="bRegistration" type="button" value="Registration" />
     </div>
 	
+	<div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=782180468606086";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-login-button" onlogin="javascriprt:checkLoginState();" scope="user_education_history,user_birthday,user_hometown,user_likes,email,user_photos,user_events,user_location,user_relationships,user_relationship_details,user_religion_politics,user_website,user_work_history,user_about_me" size="xlarge" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true">
+    </div>
+	
 	<div id="regPage">
         <label>Enter your login</label><br />
         <input id="textLoginReg" type="text" /><br />

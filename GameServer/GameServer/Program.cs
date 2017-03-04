@@ -26,11 +26,11 @@ namespace GameServer
             //command.ExecuteNonQuery();
             //connection.Close();
 
-            ////DataBaseManager d = new DataBaseManager();
-            //////d.RA("reg", "lena", "111", "eo.pakhomova96@gmail.com");
-            ////d.ChangePassword("lena", "111");
-            ////d.SelectAll();
-            ////Console.ReadKey(true);
+            //DataBaseManager d = new DataBaseManager();
+            ////////d.RA("reg", "lena", "111", "eo.pakhomova96@gmail.com");
+            //////d.ChangePassword("lena", "111");
+            //d.SelectAll();
+            //Console.ReadKey(true);
         }
         
     }

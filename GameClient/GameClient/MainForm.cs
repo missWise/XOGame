@@ -45,7 +45,7 @@ namespace GameClient
             }
             try
             {
-                cm.Connect("auth", tbLogin.Text, tbPassword.Text, pl);
+                cm.Connect(tbLogin.Text, "auth," + tbLogin.Text + "," + tbPassword.Text + ",0", pl);
             }
             catch 
             {
@@ -78,7 +78,34 @@ namespace GameClient
             try
             {
                 cm.Send("sendpassword," + tbLogin.Text);
-                return;
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
+
+        private void btnFB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExternalAuth auth = new ExternalAuth();
+                string info = auth.Facebook_Auth();
+                cm.Connect(info, "foreign," + info + ",0", pl);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
+
+        private void btnG_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExternalAuth auth = new ExternalAuth();
+                string info = auth.Google_Auth();
+                cm.Connect(info, "foreign," + info + ",0", pl);
             }
             catch
             {

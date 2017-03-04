@@ -13,10 +13,17 @@ namespace GameServer
 
         public static void AddToLog(string name, string data)
         {
-            var message = DateTime.Now.ToString() + " - " + name + ": " + data;
-            StreamWriter sw = File.AppendText(pathToLog);
-            sw.WriteLine(message);
-            sw.Dispose();
+            try
+            {
+                var message = DateTime.Now.ToString() + " - " + name + ": " + data;
+                StreamWriter sw = File.AppendText(pathToLog);
+                sw.WriteLine(message);
+                sw.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("METHOD: AddToLog" + ex.StackTrace + ex.Message, ex.InnerException);
+            }
         }
     }
 }

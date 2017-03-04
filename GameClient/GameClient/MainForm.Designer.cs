@@ -35,6 +35,8 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lb_pass = new System.Windows.Forms.Label();
             this.btnForgotPass = new System.Windows.Forms.Button();
+            this.btnFB = new System.Windows.Forms.Button();
+            this.btnG = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbLogin
@@ -65,7 +67,7 @@
             // 
             // btnReg
             // 
-            this.btnReg.Location = new System.Drawing.Point(32, 165);
+            this.btnReg.Location = new System.Drawing.Point(32, 194);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(196, 23);
             this.btnReg.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // btnForgotPass
             // 
-            this.btnForgotPass.Location = new System.Drawing.Point(32, 136);
+            this.btnForgotPass.Location = new System.Drawing.Point(32, 165);
             this.btnForgotPass.Name = "btnForgotPass";
             this.btnForgotPass.Size = new System.Drawing.Size(196, 23);
             this.btnForgotPass.TabIndex = 7;
@@ -99,11 +101,33 @@
             this.btnForgotPass.UseVisualStyleBackColor = true;
             this.btnForgotPass.Click += new System.EventHandler(this.btnForgotPass_Click);
             // 
+            // btnFB
+            // 
+            this.btnFB.Location = new System.Drawing.Point(32, 136);
+            this.btnFB.Name = "btnFB";
+            this.btnFB.Size = new System.Drawing.Size(96, 23);
+            this.btnFB.TabIndex = 8;
+            this.btnFB.Text = "Facebook";
+            this.btnFB.UseVisualStyleBackColor = true;
+            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
+            // 
+            // btnG
+            // 
+            this.btnG.Location = new System.Drawing.Point(134, 136);
+            this.btnG.Name = "btnG";
+            this.btnG.Size = new System.Drawing.Size(94, 23);
+            this.btnG.TabIndex = 9;
+            this.btnG.Text = "Google";
+            this.btnG.UseVisualStyleBackColor = true;
+            this.btnG.Click += new System.EventHandler(this.btnG_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 203);
+            this.ClientSize = new System.Drawing.Size(240, 232);
+            this.Controls.Add(this.btnG);
+            this.Controls.Add(this.btnFB);
             this.Controls.Add(this.btnForgotPass);
             this.Controls.Add(this.lb_pass);
             this.Controls.Add(this.tbPassword);
@@ -127,6 +151,8 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lb_pass;
         private System.Windows.Forms.Button btnForgotPass;
+        private System.Windows.Forms.Button btnFB;
+        private System.Windows.Forms.Button btnG;
     }
 }
 

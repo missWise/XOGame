@@ -7,6 +7,8 @@ var texNewPass, bNewPass, bChangePass;
 var textLoginReg, texPassReg, bRegistrationReg, bBackReg;
 var bForgotPass;
 var str = "";
+var fblogin = "";
+var fbid = 0;
 
 window.onload = function () {
 
@@ -45,6 +47,71 @@ window.onload = function () {
 	bBackReg.onclick = OnBackReg;
 	bRegistrationReg.onclick = OnRegistrationReg;
 }
+
+function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+        success(response);
+        //if (authorization) {
+        //    authfb();
+        //    return;
+        //}
+        regfb();
+    } else if (response.status === 'not_authorized') {
+        document.getElementById('status').innerHTML = 'Please log ' +
+          'into this app.';
+    } else {
+        document.getElementById('status').innerHTML = 'Please log ' +
+          'into Facebook.';
+    }
+}
+
+function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+}
+
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '{1821350971448020}',
+        cookie: true,  // enable cookies to allow the server to access 
+        // the session
+        xfbml: true,  // parse social plugins on this page
+        version: 'v2.8' // use graph api version 2.8
+    });
+
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+};
+
+function success(response) {
+    console.log(response.authResponse.accessToken);
+    console.log(response.authResponse.name);
+    console.log(response.authResponse.first_name);
+    console.log(response.authResponse.last_name);
+    console.log(response.authResponse.email);
+    console.log(response.authResponse.userID.first_name);
+    console.log(response.authResponse.userID.email);
+    console.log(response.authResponse.userID.last_name);
+    var userid1 = response.authResponse.accessToken.id;
+    var useremail1 = response.authResponse.accessToken.email;
+    var userid = response.id;
+    var useremail = response.email;
+}
+
+function regfb() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', { fields: 'name, email, first_name, last_name' }, function (response) {
+        document.getElementById('status').innerHTML = 'name = ' + response.name + ' email = ' + response.email + '. Fn: ' + response.first_name + ', Ln: ' + response.last_name + '. Username: ' + response.username + '. ID: ' + response.id;
+        fblogin = response.first_name;
+        fbid = response.id;
+        connect("regfb");
+        setTimeout(function () {
+        }, 5000);
+    });
 
 function connect(command) {
 			try

@@ -158,3 +158,246 @@
 25.02.2017 18:16:52 - oleq: auth,oleq,1971,0
 25.02.2017 18:16:52 - oleq: auth,oleq,1971,0
 25.02.2017 18:16:53 - oleq: auth,oleq,1971,0
+25.02.2017 18:42:53 - server: started
+25.02.2017 18:43:10 - oleq: auth,oleq,1971,0
+25.02.2017 18:43:26 - lena: auth,lena,111,0
+25.02.2017 18:43:32 - lena: lobby,invite,lena,oleq,XO
+
+25.02.2017 18:43:36 - oleq: games,ask,No,oleq,lena,XO
+
+25.02.2017 18:43:40 - oleq: lobby,exit,oleq
+
+25.02.2017 18:43:48 - oleq: auth,oleq,1971,0
+25.02.2017 18:43:55 - oleq: lobby,exit,oleq
+
+25.02.2017 18:43:57 - lena: lobby,exit,lena
+
+25.02.2017 23:09:13 - server: started
+25.02.2017 23:39:21 - server: started
+25.02.2017 23:39:59 - lena: auth,lena,111,0
+25.02.2017 23:41:34 - lena: lobby,exit,lena
+
+26.02.2017 16:40:20 - server: started
+26.02.2017 16:42:30 - server: started
+26.02.2017 16:43:32 - server: started
+26.02.2017 16:45:32 - server: started
+26.02.2017 16:55:17 - server: started
+26.02.2017 16:55:35 - server: started
+26.02.2017 16:55:51 - lena: auth,lena,111,0
+26.02.2017 16:55:59 - oleq: auth,oleq,1971,0
+26.02.2017 16:56:02 - lena: lobby,invite,lena,oleq,XO
+
+26.02.2017 16:57:02 - server: started
+26.02.2017 16:57:22 - oleq: auth,oleq,1971,0
+26.02.2017 16:57:27 - lena: auth,lena,111,0
+26.02.2017 16:57:30 - oleq: lobby,invite,oleq,lena,XO
+
+26.02.2017 16:58:49 - server: started
+27.02.2017 13:52:42 - server: started
+27.02.2017 13:53:54 - server: started
+27.02.2017 13:54:45 - server: started
+27.02.2017 13:55:42 - server: started
+27.02.2017 14:01:08 - server: started
+27.02.2017 14:35:36 - server: started
+27.02.2017 14:36:31 - server: started
+27.02.2017 14:37:22 - server: started
+27.02.2017 14:37:26 - lena: auth,lena,111,0
+27.02.2017 14:37:30 - lena: lobby,exit,lena
+
+27.02.2017 14:37:37 - server: started
+27.02.2017 14:37:53 - lena: auth,lena,111,0
+27.02.2017 14:38:00 - lena: lobby,changepass,lena,111
+
+27.02.2017 14:38:17 - oleq: auth,oleq,1971,0
+27.02.2017 14:38:20 - oleq: lobby,invite,oleq,lena,XO
+
+27.02.2017 14:38:27 - lena: lobby,invite,lena,oleq,XO
+
+27.02.2017 14:38:30 - oleq: games,ask,No,oleq,lena,XO
+
+27.02.2017 14:38:34 - oleq: lobby,invite,oleq,lena,XO
+
+27.02.2017 14:38:37 - lena: games,ask,Yes,lena,oleq,XO
+
+27.02.2017 14:38:43 - oleq: games,gamexo,oleq,1
+
+27.02.2017 14:38:44 - lena: games,gamexo,lena,7
+
+27.02.2017 14:38:46 - oleq: games,gamexo,oleq,5
+
+27.02.2017 14:38:48 - lena: games,gamexo,lena,5
+
+27.02.2017 14:38:50 - oleq: games,gamexo,oleq,3
+
+27.02.2017 14:38:52 - lena: games,gamexo,lena,2
+
+27.02.2017 14:38:56 - oleq: games,gamexo,oleq,stopgame
+
+27.02.2017 14:38:58 - lena: games,gamexo,lena,stopgame
+
+27.02.2017 14:38:59 - lena: lobby,exit,lena
+
+27.02.2017 14:39:00 - oleq: lobby,exit,oleq
+
+27.02.2017 14:39:40 - oleq: auth,oleq,1971,0
+27.02.2017 14:40:05 - lena: auth,lena,111,0
+27.02.2017 14:40:07 - lena: lobby,invite,lena,oleq,XO
+
+27.02.2017 14:40:09 - oleq: games,ask,Yes,oleq,lena,XO
+
+27.02.2017 14:40:12 - oleq: games,gamexo,oleq,0
+
+27.02.2017 14:40:12 - lena: games,gamexo,lena,4
+
+27.02.2017 14:40:13 - oleq: games,gamexo,oleq,5
+
+27.02.2017 14:40:14 - lena: games,gamexo,lena,1
+
+27.02.2017 14:40:15 - oleq: games,gamexo,oleq,7
+
+27.02.2017 14:40:17 - lena: games,gamexo,lena,3
+
+27.02.2017 14:40:18 - oleq: games,gamexo,oleq,6
+
+27.02.2017 14:40:19 - lena: games,gamexo,lena,2
+
+27.02.2017 14:40:20 - oleq: games,gamexo,oleq,8
+
+27.02.2017 14:40:22 - oleq: games,gamexo,oleq,stopgame
+
+27.02.2017 14:40:22 - lena: games,gamexo,lena,stopgame
+
+27.02.2017 14:40:24 - lena: lobby,exit,lena
+
+27.02.2017 14:40:24 - oleq: lobby,exit,oleq
+
+27.02.2017 14:42:29 - oleq: auth,oleq,1971,0
+27.02.2017 14:42:44 - lena: auth,lena,111,0
+27.02.2017 14:42:46 - lena: lobby,invite,lena,oleq,XO
+
+27.02.2017 14:42:48 - oleq: games,ask,Yes,oleq,lena,XO
+
+27.02.2017 14:42:51 - oleq: games,gamexo,oleq,0
+
+27.02.2017 14:42:53 - lena: games,gamexo,lena,4
+
+27.02.2017 14:42:54 - oleq: games,gamexo,oleq,2
+
+28.02.2017 11:43:15 - server: started
+28.02.2017 11:44:58 - lena: auth,lena,111,0
+28.02.2017 11:45:01 - lena: auth,lena,111,0
+28.02.2017 11:48:06 - server: started
+28.02.2017 11:49:04 - oleq: auth,oleq,1971,0
+28.02.2017 11:49:35 - lena: auth,lena,111,0
+28.02.2017 11:49:38 - lena: lobby,invite,lena,oleq,XO
+
+28.02.2017 11:49:41 - oleq: games,ask,Yes,oleq,lena,XO
+
+28.02.2017 11:49:45 - oleq: games,gamexo,oleq,1
+
+28.02.2017 11:49:46 - oleq: games,gamexo,oleq,4
+
+28.02.2017 11:49:47 - oleq: games,gamexo,oleq,0
+
+28.02.2017 11:49:48 - oleq: games,gamexo,oleq,6
+
+28.02.2017 11:49:48 - oleq: games,gamexo,oleq,3
+
+28.02.2017 11:49:48 - oleq: games,gamexo,oleq,4
+
+28.02.2017 11:49:49 - lena: games,gamexo,lena,0
+
+28.02.2017 11:49:50 - oleq: games,gamexo,oleq,4
+
+28.02.2017 11:49:52 - oleq: games,gamexo,oleq,1
+
+28.02.2017 11:49:53 - lena: games,gamexo,lena,5
+
+28.02.2017 11:49:54 - oleq: games,gamexo,oleq,stopgame
+
+28.02.2017 11:49:57 - lena: games,gamexo,lena,stopgame
+
+28.02.2017 11:50:00 - lena: list,
+
+28.02.2017 11:50:44 - qwe: reg,qwe,123,eo.pakhomova96@gmail.com,0
+28.02.2017 11:50:49 - qwe: ���b������N�����N������
+28.02.2017 11:51:19 - qwe: auth,qwe,123,0
+28.02.2017 11:51:20 - qwe: auth,qwe,123,0
+28.02.2017 11:51:32 - server: started
+28.02.2017 11:51:38 - qwe: auth,qwe,123,0
+28.02.2017 11:51:48 - lena: auth,lena,111,0
+28.02.2017 11:51:50 - lena: lobby,invite,lena,qwe,XO
+
+28.02.2017 11:51:51 - qwe: ����b��������;��������N��
+28.02.2017 11:51:53 - qwe: ��oYj�8�u�<�C(�Ci
+28.02.2017 11:52:08 - lena: games,gamexo,lena,1
+
+28.02.2017 11:52:09 - qwe: �����������������
+28.02.2017 11:52:10 - lena: games,gamexo,lena,2
+
+28.02.2017 11:52:11 - qwe: �������鞝�㚃������
+28.02.2017 11:52:12 - lena: games,gamexo,lena,3
+
+28.02.2017 11:52:13 - qwe: ��zC�"�}	o�y&�wV2�}V{
+28.02.2017 11:52:15 - lena: games,gamexo,lena,stopgame
+
+28.02.2017 11:52:18 - qwe: ��M�j!r�
+28.02.2017 11:52:19 - qwe: ���_��0�t�s�x�6�s�.�s�3�x�s�Y
+28.02.2017 11:52:22 - lena: games,ask,Yes,lena,qwe,XO
+
+28.02.2017 11:52:26 - lena: games,gamexo,lena,0
+
+28.02.2017 11:52:27 - lena: games,gamexo,lena,6
+
+28.02.2017 11:52:27 - qwe: ���¶i�������������
+28.02.2017 11:52:28 - qwe: ��'|��@��TP��J��L
+28.02.2017 11:52:29 - lena: games,gamexo,lena,7
+
+28.02.2017 11:52:43 - lena: games,gamexo,lena,stopgame
+
+28.02.2017 11:52:50 - qwe: ��Y=ht5R
+ 0ID.X
+28.02.2017 11:52:52 - lena: lobby,exit,lena
+
+02.03.2017 18:23:14 - server: started
+02.03.2017 18:56:40 - server: started
+02.03.2017 18:58:10 - Елена: foreign,Елена,0
+02.03.2017 18:58:31 - Елена: ���"�H�M�*��0�V�
+02.03.2017 19:48:15 - server: started
+02.03.2017 19:54:27 - server: started
+02.03.2017 19:58:15 - Елена: foreign,Елена,0
+02.03.2017 19:58:29 - Елена: lobby,exit,Елена
+
+02.03.2017 20:01:09 - server: started
+02.03.2017 20:04:33 - server: started
+04.03.2017 14:14:20 - server: started
+04.03.2017 21:36:27 - server: started
+04.03.2017 21:38:21 - Елена: foreign,Елена,0
+04.03.2017 21:41:29 - Елена: foreign,Елена,0
+04.03.2017 21:41:44 - oleq: auth,oleq,1971,0
+04.03.2017 21:41:49 - Елена: lobby,invite,Елена,oleq,XO
+
+04.03.2017 21:41:51 - oleq: ��tA�c,�wX �oX�wX.�am^���^���^�X�
+04.03.2017 21:42:06 - oleq: ��N
+��)k��=&��#o��be��?&�
+04.03.2017 21:42:08 - Елена: games,gamexo,Елена,5
+
+04.03.2017 21:42:09 - oleq: ����������됕�����������
+04.03.2017 21:42:10 - Елена: games,gamexo,Елена,8
+
+04.03.2017 21:42:11 - oleq: ��
+$�_mE�:y�>gA�0&K�:{�
+04.03.2017 21:42:13 - Елена: games,gamexo,Елена,stopgame
+
+04.03.2017 21:42:16 - oleq: ����R���!�
+04.03.2017 21:42:18 - oleq: ��M�!{}�48v�;}k�a{s�<8����7���2aLP
+04.03.2017 21:42:21 - Елена: games,ask,Yes,Елена,oleq,XO
+
+04.03.2017 21:42:25 - Елена: games,gamexo,Елена,stopgame
+
+04.03.2017 22:55:09 - Елена: foreign,Елена,0
+04.03.2017 22:55:17 - qwe: auth,qwe,123,0
+04.03.2017 22:55:23 - qwe: ���� pդb��eп,ή
+04.03.2017 22:55:30 - Елена: foreign,Елена,0
+04.03.2017 22:55:58 - Елена: foreign,Елена,0
+04.03.2017 22:58:40 - oleq: ��Qjw�=�(F�8[�=
