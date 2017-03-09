@@ -1,0 +1,20 @@
+XO_socket.Droid.AdapterXO, XO_socket.Droid;md5a4744f6af2b03b94ab1e07e41594a204.AdapterXO
+XO_socket.Droid.AdapterXO, XO_socket.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a4744f6af2b03b94ab1e07e41594a204.AdapterXO
+XO_socket.Droid.AdapterXO;md5a4744f6af2b03b94ab1e07e41594a204.AdapterXO
+xo_socket.droid.AdapterXO;md5a4744f6af2b03b94ab1e07e41594a204.AdapterXO
+XO_socket.Droid.FragmentGame, XO_socket.Droid;md5a4744f6af2b03b94ab1e07e41594a204.FragmentGame
+XO_socket.Droid.FragmentGame, XO_socket.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a4744f6af2b03b94ab1e07e41594a204.FragmentGame
+XO_socket.Droid.FragmentGame;md5a4744f6af2b03b94ab1e07e41594a204.FragmentGame
+xo_socket.droid.FragmentGame;md5a4744f6af2b03b94ab1e07e41594a204.FragmentGame
+XO_socket.Droid.FragmentLobby, XO_socket.Droid;md5a4744f6af2b03b94ab1e07e41594a204.FragmentLobby
+XO_socket.Droid.FragmentLobby, XO_socket.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a4744f6af2b03b94ab1e07e41594a204.FragmentLobby
+XO_socket.Droid.FragmentLobby;md5a4744f6af2b03b94ab1e07e41594a204.FragmentLobby
+xo_socket.droid.FragmentLobby;md5a4744f6af2b03b94ab1e07e41594a204.FragmentLobby
+XO_socket.Droid.FragmentRA, XO_socket.Droid;md5a4744f6af2b03b94ab1e07e41594a204.FragmentRA
+XO_socket.Droid.FragmentRA, XO_socket.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a4744f6af2b03b94ab1e07e41594a204.FragmentRA
+XO_socket.Droid.FragmentRA;md5a4744f6af2b03b94ab1e07e41594a204.FragmentRA
+xo_socket.droid.FragmentRA;md5a4744f6af2b03b94ab1e07e41594a204.FragmentRA
+XO_socket.Droid.MainActivity, XO_socket.Droid;md5a4744f6af2b03b94ab1e07e41594a204.MainActivity
+XO_socket.Droid.MainActivity, XO_socket.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a4744f6af2b03b94ab1e07e41594a204.MainActivity
+XO_socket.Droid.MainActivity;md5a4744f6af2b03b94ab1e07e41594a204.MainActivity
+xo_socket.droid.MainActivity;md5a4744f6af2b03b94ab1e07e41594a204.MainActivity

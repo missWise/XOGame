@@ -208,3 +208,16 @@ no such table: PersonalData
    в GameServer.CommandManager.Dispatcher(String message) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\CommandManager.cs:строка 30METHOD: SetCommand   в GameServer.Lobby.SetCommand(String command) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\Lobby\Lobby.cs:строка 27Ссылка на объект не указывает на экземпляр объекта. 
 04.03.2017 21:43:07
    в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 16:03:12
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:34:50
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:35:36
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:53:26
+   в GameServer.CommandManager.Dispatcher(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\CommandManager.cs:строка 42
+   в GameServer.ServerAPI.Receive() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 124METHOD: Dispatcher   в GameServer.Games.SetCommand(String command) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\Games.cs:строка 61
+   в GameServer.CommandManager.Dispatcher(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\CommandManager.cs:строка 33METHOD: SetCommand   в GameServer.XO.Action(Client player, String input) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 152
+   в GameServer.Games.SetCommand(String command) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\Games.cs:строка 52METHOD: Action   в GameServer.XO.Turn1(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 173
+   в GameServer.XO.Action(Client player, String input) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 74METHOD: Turn1   в GameServer.XO.Turn1(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 160Индекс находился вне границ массива. 

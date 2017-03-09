@@ -91,6 +91,8 @@ namespace GameServer
                     else
                     {
                         stream.Write("loginrefuse");
+                        connectedClient.Close();
+                        
                     }
                     Thread.Sleep(50);
                 }

@@ -12,7 +12,7 @@ namespace GameServer
 {
     class DataBaseManager
     {
-        string databaseName = @"D:\Programming\ORT\HomeWork44\GHXO\XOGame\XODatabase.db";
+        string databaseName = @"XODatabase.db";
         string tablename = "PersonalData";
         SQLiteConnection connection;
         public DataBaseManager() { }
