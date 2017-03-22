@@ -21,19 +21,26 @@ namespace GameServer
 
         public void Dispatcher(string message)
         {
-            string[] input = message.Split(',');
-            switch(input[0])
+            try
             {
-                case "lobby":
-                    lobby.SetCommand(message);
-                    break;
-                case "games":
-                    games.SetCommand(message);
-                    break;
-                case "list":
-                    connectionList.BroadcastSend();
-                    break;
-            }         
+                string[] input = message.Split(',');
+                switch (input[0])
+                {
+                    case "lobby":
+                        lobby.SetCommand(message);
+                        break;
+                    case "games":
+                        games.SetCommand(message);
+                        break;
+                    case "list":
+                        connectionList.BroadcastSend();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("METHOD: Dispatcher" + ex.StackTrace + ex.Message, ex.InnerException);
+            }
         }      
     }
 }

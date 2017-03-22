@@ -1,0 +1,57 @@
+﻿.mainPage {
+    border: groove;
+    width: 500px;
+    
+}
+
+.gameField {
+    width:163px;
+    height:163px;
+	font-size:5em;
+
+}
+.btnrms{
+    margin-top  : 10px;
+    margin-left : 20px;
+}
+#popupMenu {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display:none;
+}
+
+#playerList {
+    height: 350px;
+    display:none;
+}
+
+#statusMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    display:none;
+}
+
+#changePassPage{
+	display: none;
+}
+
+#regPage{
+	display: none;
+}
+
+#authPage{
+
+}
+
+#gameMenu{
+    display:none;
+}
+
+#bExit{
+	font-size: 1em;
+	width: 50px;
+	height:25px;
+}

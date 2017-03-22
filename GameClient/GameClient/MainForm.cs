@@ -14,13 +14,15 @@ namespace GameClient
 {
     public partial class MainForm : Form
     {
-        ClientManager cm;
+        public ClientManager cm;
         public PlayersList pl;
+        public RegistrationForm rf;
         public MainForm()
         {         
             InitializeComponent();
             cm = new ClientManager(this);
             pl = new PlayersList();
+            rf = new RegistrationForm(this);
             CheckForIllegalCrossThreadCalls = false;
         }
         
@@ -43,14 +45,7 @@ namespace GameClient
             }
             try
             {
-                cm.Connect("auth", tbLogin.Text, tbPassword.Text, pl);
-                //Thread.Sleep(1000);
-                //if (!(pl.lb_name.Text == "label1"))
-                //{
-                //    pl.Show();
-                //    this.Hide();
-                //}
-                //else MessageBox.Show("Invalid login or pass");
+                cm.Connect(tbLogin.Text, "auth," + tbLogin.Text + "," + tbPassword.Text + ",0", pl);
             }
             catch 
             {
@@ -61,37 +56,8 @@ namespace GameClient
 
         private void btnReg_Click(object sender, EventArgs e)
         {
-            if (tbLogin.Text == "" || tbPassword.Text == "")
-            {
-                MessageBox.Show("Empty username or password!");
-                return;
-            }
-            else if (tbLogin.Text.Length > 15)
-            {
-                MessageBox.Show("Very long username! Enter username till 15 symbols.");
-                return;
-            }
-            else if (!CheckingLogin(tbLogin.Text, tbPassword.Text))
-            {
-                MessageBox.Show("Username and password could contain uppercase, lowercase letters and numbers");
-                return;
-            }
-            try
-            {
-                cm.Connect("reg", tbLogin.Text, tbPassword.Text, pl);
-
-                //Thread.Sleep(1000);
-                //if (!(pl.lb_name.Text == "label1"))
-                //{
-                //    pl.Show();
-                //    this.Hide();
-                //}
-                //else MessageBox.Show("Invalid login");
-            }
-            catch 
-            {
-                MessageBox.Show("Server is not available");
-            }
+            rf.Show();
+            Hide();
         }
 
         private bool CheckingLogin(string login, string pass)
@@ -101,6 +67,50 @@ namespace GameClient
                 return true;
             return false;
         }
-        
+
+        private void btnForgotPass_Click(object sender, EventArgs e)
+        {
+            if (tbLogin.Text == "")
+            {
+                MessageBox.Show("Please, enter login!");
+                return;
+            }
+            try
+            {
+                cm.Send("sendpassword," + tbLogin.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
+
+        private void btnFB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExternalAuth auth = new ExternalAuth();
+                string info = auth.Facebook_Auth();
+                cm.Connect(info, "foreign," + info + ",0", pl);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
+
+        private void btnG_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExternalAuth auth = new ExternalAuth();
+                string info = auth.Google_Auth();
+                cm.Connect(info, "foreign," + info + ",0", pl);
+            }
+            catch
+            {
+                MessageBox.Show("Server is not available");
+            }
+        }
     }
 }

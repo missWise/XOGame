@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Js/PlayerSelection.js" ></script>
+    <link href="Styles/StartPageStyle.css"  rel="stylesheet"/>
+
+</head>
+<body>
+
+	<div class="mainPage" id="playerList" >
+
+    </div>
+    <div class="mainPage" id="popupMenu">
+        <input id="bLogIn" type="button" value="Exit" />
+        <input id="bLogOut" type="button" value="Refresh" />
+        <input id="bInvite" type="button" value="Invite" />
+		<input id="bChangePass" type="button" value="Change password" />
+    </div>
+    <div class="mainPage" id="statusMenu">
+        <input id="statusLabel2" type="text" value="Your name :" />
+    </div>
+
+
+    <div id="authPage">
+        <label>Enter your login</label><br />
+        <input id="textLogin" type="text" /><br />
+        <label>Enter your password</label><br />
+        <input id="texPass" type="password" value="" /><br />
+        <input id="bAuthorization" type="button" value="Authorization" /></br>
+		<input id="bForgotPass" type="button" value="Forgot password" /></br>
+        <input id="bRegistration" type="button" value="Registration" />
+    </div>
+	
+	<div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8&appId=782180468606086";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-login-button" onlogin="javascriprt:checkLoginState();" scope="user_education_history,user_birthday,user_hometown,user_likes,email,user_photos,user_events,user_location,user_relationships,user_relationship_details,user_religion_politics,user_website,user_work_history,user_about_me" size="xlarge" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true">
+    </div>
+	
+	<div id="regPage">
+        <label>Enter your login</label><br />
+        <input id="textLoginReg" type="text" /><br />
+        <label>Enter your password</label><br />
+        <input id="texPassReg" type="password" value="" /><br />
+		<label>Enter your email</label><br />
+        <input id="texEmailReg" type="email" value="" /><br />
+        <input id="bRegistrationReg" type="button" value="Registration" />
+		<input id="bBackReg" type="button" value="Back" /></br>
+    </div>
+	
+	<div id="changePassPage">
+        <label>Enter new password</label><br />
+        <input id="texNewPass" type="password" value="" /><br />
+        <input id="bNewPass" type="button" value="Change password" />
+    </div>
+
+    <div id="gameMenu" class="mainPage">
+		<label id = "lTurn"></label><br/>
+        <input class="gameField" id="b1" type="button" onclick = "OnBtnClick(0)" value=" " />
+        <input class="gameField" id="b2" type="button" onclick = "OnBtnClick(1)" value=" " />
+        <input class="gameField" id="b3" type="button" onclick = "OnBtnClick(2)" value=" " /><br />
+        <input class="gameField" id="b4" type="button" onclick = "OnBtnClick(3)" value=" " />
+        <input class="gameField" id="b5" type="button" onclick = "OnBtnClick(4)" value=" " />
+        <input class="gameField" id="b6" type="button" onclick = "OnBtnClick(5)" value=" " /><br />
+        <input class="gameField" id="b7" type="button" onclick = "OnBtnClick(6)" value=" " />
+        <input class="gameField" id="b8" type="button" onclick = "OnBtnClick(7)" value=" " />
+        <input class="gameField" id="b9" type="button" onclick = "OnBtnClick(8)" value=" " />
+		<input class="gameField" type="button" id="bExit" value="Exit"/><br />
+		
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+android.app.Application
+XO_socket.Droid

@@ -18,35 +18,49 @@ namespace GameClient
         PlayersList playersList;
         IGame game;
         MainForm mf;
+        
         public ClientManager(MainForm mf)
         {
             this.mf = mf;
         }
-       
-        public ClientManager(){}
 
-        public void Connect(string command, string name, string password, PlayersList pl)
+        public ClientManager() { }
+
+        public void Connect(string name, string message, PlayersList pl)
         {
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);   
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);
             client = new TcpClient();
             client.Connect(ipe);
             netStream = client.GetStream();
-            Thread receiveThread = new Thread(new ThreadStart(ReceiveData));
-            receiveThread.Start();
 
-            SendLogin(command, name, password);
-           
+            SendLogin(message);
+
             this.playersList = pl;
             playersList.name = name;
             playersList.stream = netStream;
+            Thread receiveThread = new Thread(new ThreadStart(ReceiveData));
+            receiveThread.Start();
         }
 
-        void SendLogin(string command, string name, string password)
+        public void Send(string mesage)
+        {
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);
+            client = new TcpClient();
+            client.Connect(ipe);
+            netStream = client.GetStream();
+            StreamWriter sw = new StreamWriter(netStream);
+            sw.WriteLine(mesage);
+            sw.Flush();
+            Thread passThread = new Thread(new ThreadStart(PassReceive));
+            passThread.Start();
+        }
+
+        void SendLogin(string message)
         {
             try
             {
                 StreamWriter sw = new StreamWriter(netStream);
-                sw.WriteLine(command + "," + name + "," + password + "," + "0");
+                sw.WriteLine(message);
                 sw.Flush();
             }
             catch
@@ -54,9 +68,8 @@ namespace GameClient
                 MessageBox.Show("Server is not available!");
             }
         }
-       
-        void ReceiveData()
 
+        void ReceiveData()
         {
             while (true)
             {
@@ -73,6 +86,7 @@ namespace GameClient
                             playersList.lb_name.Text = msg[1];
                             Thread thread = new Thread(new ThreadStart(mf.pl.ShowForm));
                             mf.Hide();
+                            mf.rf.Hide();
                             thread.Start();
                             break;
                         case "loginrefuse":
@@ -98,10 +112,33 @@ namespace GameClient
                             game.ReceiveGameData(output);
                             break;
                     }
-                }             
+                }
+                Thread.Sleep(100);
             }
         }
+        void PassReceive()
+        {
+            while (true)
+            {
+                string output = "";
 
-        
+                if (netStream.DataAvailable)
+                {
+                    StreamReader sr = new StreamReader(netStream);
+                    output = sr.ReadLine();
+                    string[] msg = output.Split(',');
+                    switch (msg[0])
+                    {
+                        case "forgotpasssuccess":
+                            MessageBox.Show("Your password was sent to your email!");
+                            return;
+                        case "forgotpassrefuse":
+                            MessageBox.Show("Invalid login!");
+                            return;
+                    }
+                }
+                Thread.Sleep(100);
+            }
+        }
     }
 }

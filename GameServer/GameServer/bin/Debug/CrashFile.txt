@@ -1,0 +1,223 @@
+26.02.2017 16:44:34
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.SendPassword(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 122
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 65METHOD: SendPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.SendPassword(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 107METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+26.02.2017 16:45:41
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 79
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 75METHOD: RA   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 163
+   at GameServer.DataBaseManager.RA(String command, String login, String password, String email) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 65METHOD: CheckingPassword   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 99
+   at GameServer.DataBaseManager.CheckingPassword(String login, String password) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 149METHOD: CheckingIfExist   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 28
+   at GameServer.DataBaseManager.CheckingIfExist(String login) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 88METHOD: Conn   at System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at GameServer.DataBaseManager.Conn() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:line 24unable to open database file 
+26.02.2017 16:56:02
+   at GameServer.CommandManager.Dispatcher(String message) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\CommandManager.cs:line 42
+   at GameServer.ServerAPI.Receive() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 114METHOD: Dispatcher   at GameServer.Lobby.SetCommand(String command) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\Lobby.cs:line 41
+   at GameServer.CommandManager.Dispatcher(String message) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\CommandManager.cs:line 30METHOD: SetCommand   at GameServer.InviteManager.SendInvite(Client player1, Client player2, String gameid) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\InviteManager.cs:line 21
+   at GameServer.Lobby.SetCommand(String command) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\Lobby.cs:line 28METHOD: SendInvite   at GameServer.InviteManager.SendInvite(Client player1, Client player2, String gameid) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\InviteManager.cs:line 16Value does not fall within the expected range. 
+26.02.2017 16:57:42
+   at GameServer.CommandManager.Dispatcher(String message) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\CommandManager.cs:line 42
+   at GameServer.ServerAPI.Receive() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 114METHOD: Dispatcher   at GameServer.Lobby.SetCommand(String command) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\Lobby.cs:line 41
+   at GameServer.CommandManager.Dispatcher(String message) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\CommandManager.cs:line 30METHOD: SetCommand   at GameServer.InviteManager.SendInvite(Client player1, Client player2, String gameid) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\InviteManager.cs:line 21
+   at GameServer.Lobby.SetCommand(String command) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\Lobby.cs:line 28METHOD: SendInvite   at GameServer.InviteManager.SendInvite(Client player1, Client player2, String gameid) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\Lobby\InviteManager.cs:line 16Value does not fall within the expected range. 
+26.02.2017 16:59:06
+   at GameServer.ConnectionList.AddList(Client client) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ConnectionList.cs:line 33
+   at GameServer.ServerAPI.ConnectionLoop() in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:line 79METHOD: AddList   at GameServer.ConnectionList.AddList(Client client) in C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ConnectionList.cs:line 24Value does not fall within the expected range. 
+27.02.2017 13:52:50
+   в GameServer.DataBaseManager.SendPassword(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.CheckingIfExist(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 99
+   в GameServer.DataBaseManager.SendPassword(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 107METHOD: CheckingIfExist   в GameServer.DataBaseManager.Conn() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 28
+   в GameServer.DataBaseManager.CheckingIfExist(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 88METHOD: Conn   в System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   в System.Data.SQLite.SQLiteConnection.Open()
+   в GameServer.DataBaseManager.Conn() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 24unable to open database file 
+   в GameServer.DataBaseManager.SendPassword(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.CheckingIfExist(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 99
+   в GameServer.DataBaseManager.SendPassword(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 107METHOD: CheckingIfExist   в GameServer.DataBaseManager.Conn() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 28
+   в GameServer.DataBaseManager.CheckingIfExist(String login) в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 88METHOD: Conn   в System.Data.SQLite.SQLite3.Open(String strFilename, String vfsName, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   в System.Data.SQLite.SQLiteConnection.Open()
+   в GameServer.DataBaseManager.Conn() в C:\Users\Svyatoslav\Desktop\GameServer\GameServer\DataBaseManager.cs:строка 24unable to open database file 
+27.02.2017 13:53:57
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.CheckingIfExist(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 99
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 107METHOD: CheckingIfExist   в System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   в System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   в System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   в System.Data.SQLite.SQLiteDataReader.NextResult()
+   в System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   в System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.SQLite.SQLiteCommand.ExecuteScalar(CommandBehavior behavior)
+   в System.Data.SQLite.SQLiteCommand.ExecuteScalar()
+   в GameServer.DataBaseManager.CheckingIfExist(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 90SQL logic error or missing database
+no such table: PersonalData 
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.CheckingIfExist(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 99
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 107METHOD: CheckingIfExist   в System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   в System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   в System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   в System.Data.SQLite.SQLiteDataReader.NextResult()
+   в System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   в System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   в System.Data.SQLite.SQLiteCommand.ExecuteScalar(CommandBehavior behavior)
+   в System.Data.SQLite.SQLiteCommand.ExecuteScalar()
+   в GameServer.DataBaseManager.CheckingIfExist(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 90SQL logic error or missing database
+no such table: PersonalData 
+27.02.2017 14:35:54
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+27.02.2017 14:36:43
+   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 33
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 79METHOD: AddList   в GameServer.ConnectionList.AddList(Client client) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ConnectionList.cs:строка 24Значение не попадает в ожидаемый диапазон. 
+28.02.2017 11:44:31
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.SendToMail(String login, String pass, String email) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 234
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 115METHOD: SendToMail   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   в GameServer.DataBaseManager.SendToMail(String login, String pass, String email) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 229Сбой при отправке сообщения электронной почты. System.Net.WebException: Невозможно разрешить удаленное имя: 'smtp.gmail.com'
+   в System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   в System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   в System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   в System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   в System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpClient.GetConnection()
+   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 122
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 65METHOD: SendPassword   в GameServer.DataBaseManager.SendToMail(String login, String pass, String email) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 234
+   в GameServer.DataBaseManager.SendPassword(String login) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 115METHOD: SendToMail   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   в GameServer.DataBaseManager.SendToMail(String login, String pass, String email) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\DataBaseManager.cs:строка 229Сбой при отправке сообщения электронной почты. System.Net.WebException: Невозможно разрешить удаленное имя: 'smtp.gmail.com'
+   в System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   в System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   в System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   в System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   в System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   в System.Net.Mail.SmtpClient.GetConnection()
+   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+28.02.2017 11:50:49
+   в GameServer.CommandManager.Dispatcher(String message) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\CommandManager.cs:строка 42
+   в GameServer.ServerAPI.Receive() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 114METHOD: Dispatcher   в GameServer.Lobby.SetCommand(String command) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\Lobby\Lobby.cs:строка 41
+   в GameServer.CommandManager.Dispatcher(String message) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\CommandManager.cs:строка 30METHOD: SetCommand   в GameServer.Lobby.SetCommand(String command) в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\Lobby\Lobby.cs:строка 27Ссылка на объект не указывает на экземпляр объекта. 
+04.03.2017 21:43:07
+   в GameServer.ServerAPI.ConnectionLoop() в D:\Programming\ORT\HomeWork44\GHXO\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 16:03:12
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:34:50
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:35:36
+   в GameServer.ServerAPI.ConnectionLoop() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 83Индекс находился вне границ массива. 
+09.03.2017 17:53:26
+   в GameServer.CommandManager.Dispatcher(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\CommandManager.cs:строка 42
+   в GameServer.ServerAPI.Receive() в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\ServerAPI.cs:строка 124METHOD: Dispatcher   в GameServer.Games.SetCommand(String command) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\Games.cs:строка 61
+   в GameServer.CommandManager.Dispatcher(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\CommandManager.cs:строка 33METHOD: SetCommand   в GameServer.XO.Action(Client player, String input) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 152
+   в GameServer.Games.SetCommand(String command) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\Games.cs:строка 52METHOD: Action   в GameServer.XO.Turn1(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 173
+   в GameServer.XO.Action(Client player, String input) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 74METHOD: Turn1   в GameServer.XO.Turn1(String message) в C:\Users\nikit\Desktop\game\XOGame\GameServer\GameServer\Games\XO.cs:строка 160Индекс находился вне границ массива. 
